@@ -10,7 +10,7 @@ function Loader() {
         <div></div>
         <div></div>
       </div>
-      <p>Loading...</p>
+      <p>Test netify</p>
     </div>
   );
 }
