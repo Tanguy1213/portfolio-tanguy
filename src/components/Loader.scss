@@ -1,0 +1,71 @@
+.loadingio-spinner-bars-hsugtqe7ebu {
+  width: 1440px;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  position: fixed;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  p{
+    font-style: italic;
+  }
+}
+@keyframes ldio-wvsaocdr2r {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99.99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.ldio-wvsaocdr2r {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  div {
+    width: 20px;
+    height: 80px;
+    animation: ldio-wvsaocdr2r 1.25s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    box-sizing: content-box;
+    &:nth-child(1) {
+      background: #d4ecc9;
+      animation-delay: -0.7499999999999999s;
+    }
+    &:nth-child(2) {
+      background: #a2d895;
+      animation-delay: -0.5s;
+    }
+    &:nth-child(3) {
+      background: #75b34c;
+      animation-delay: -0.25s;
+    }
+    &:nth-child(4) {
+      background: #c3d582;
+      animation-delay: -1.25s;
+    }
+  }
+}
