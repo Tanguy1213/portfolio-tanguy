@@ -1,13 +1,14 @@
 import React from "react";
 import "./Home.scss";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import ProfilePicture from "../assets/images/Profile-picture-tanguy.png"
 
 function Home() {
   return (
     <div>
-      <Header/>
-      <main>
+      <Header />
+      <main id="top-page">
         <section className="welcome-container">
           <h3>Bienvenu sur mon portfolio !</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -34,7 +35,7 @@ function Home() {
           </div>
         </div>
       </main>
-      <footer></footer>
+      <Footer/>
     </div>
   );
 }
