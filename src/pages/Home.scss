@@ -14,9 +14,7 @@ main{
     padding-top: $header-size;
 }
 .profile-picture-style{
-  object-fit: cover;
   width: 425px;
-  border-radius: 50%;
   @include fade-in(3s,0s);
 }
 

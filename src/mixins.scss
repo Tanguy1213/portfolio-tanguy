@@ -1,5 +1,5 @@
 @mixin slide-in($direction,$exectime) {
-  transform: translateX(if($direction == left, -500%, 500%));
+  transform: translateX(if($direction == left, -200%, 200%));
   animation: slide-in-animation $exectime ease forwards, fade-in $exectime+2 ease forwards;
 }
 @mixin fade-in($time,$delay){
