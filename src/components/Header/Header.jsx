@@ -24,8 +24,8 @@ function Header() {
           <h1 className="titre-page">Tanguy Strub</h1>
         </NavLink>
         <ul>
-          <li><NavLink to="/" onClick={handleHomeClick}><h2>Acceuil</h2></NavLink></li>
-          <li><NavLink><h2>Skills</h2></NavLink></li>
+          <li><NavLink to="/" onClick={handleHomeClick}><h2>Accueil</h2></NavLink></li>
+          <li><NavLink><h2>Compétences</h2></NavLink></li>
           <li><NavLink><h2>Projets</h2></NavLink></li>
           <li><NavLink><h2>Contact</h2></NavLink></li>
         </ul>

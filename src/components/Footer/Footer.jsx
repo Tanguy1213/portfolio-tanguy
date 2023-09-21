@@ -49,7 +49,6 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <a className="anchorToTop" href="#">Revenir en haut de page</a>
       </div>
     </footer>
   );
