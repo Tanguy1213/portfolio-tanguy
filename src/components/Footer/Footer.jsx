@@ -5,12 +5,6 @@ import GitLogo from "../../assets/images/github-logo.png";
 import "./Footer.scss";
 
 function Footer() {
-    const scrollToAnchor = (anchorName) => {
-        const anchorElement = document.querySelector(`[name="${anchorName}"], [id="${anchorName}"]`);
-        if (anchorElement) {
-          anchorElement.scrollIntoView({ behavior: "smooth" });
-        }
-      };
   return (
     <footer>
       <div className="footer-container">
@@ -55,7 +49,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <a className="anchorToTop" href="#" onClick={(e) => { e.preventDefault(); scrollToAnchor("top-page"); }}>Revenir en haut de page</a>
+        <a className="anchorToTop" href="#">Revenir en haut de page</a>
       </div>
     </footer>
   );
