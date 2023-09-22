@@ -31,11 +31,11 @@ header {
     align-items: center;
     padding: 1rem 6rem 1rem 6rem;
     ul {
-      width: auto;
+      width: fit-content;
       height: fit-content;
       display: flex;
       flex-direction: row;
-      gap: 50px;
+      gap: 35px;
       align-items: center;
       list-style: none;
       .logo-style {

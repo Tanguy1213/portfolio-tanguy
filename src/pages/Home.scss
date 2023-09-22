@@ -9,6 +9,16 @@
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
+  position: relative;
+  .navigationAnchor{
+    position: absolute;
+    top: 96%;
+    text-decoration: none;
+    color: black;
+    &:hover{
+      text-decoration:underline;
+    }
+  }
 }
 main{
     padding-top: $header-size;
@@ -43,7 +53,7 @@ main{
   row-gap: 20px;
   align-items: center;
   p,h3{
-    width: 30%;
+    max-width: 40%;
     text-align: center;
     @include fade-in(3s,0s);
   }

@@ -35,11 +35,11 @@ function Home() {
             <p>Ceci est mon portfolio</p>
           </div>
           <BtnDownload 
-          btnText={"Télécharger mon CV en PDF"}
-          fileUrl={"TEST2.pdf"}          
-          fileName={"CV_Strub_Tanguy.pdf"}
-          />
+          btnText={"► Téléchargez mon CV ◄"}
+          fileUrl={"https://drive.google.com/u/0/uc?id=1mB2xGa10rqBOQrGbTUwjKJ_JzBLwbuzf&export=download"}/>
+          <a className="navigationAnchor" href="#top-page">↑ Revenir en haut de page ↑</a>
         </div>
+        
       </main>
       <Footer/>
     </div>

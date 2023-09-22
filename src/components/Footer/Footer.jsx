@@ -49,6 +49,7 @@ function Footer() {
             </a>
           </li>
         </ul>
+        <span>Suivez mon activité</span>
       </div>
     </footer>
   );
