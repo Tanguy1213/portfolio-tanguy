@@ -3,6 +3,7 @@ import "./Home.scss";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import ProfilePicture from "../assets/images/Profile-picture-tanguy.png"
+import BtnDownload from "../components/BtnDownload/BtnDownload";
 
 function Home() {
   return (
@@ -33,6 +34,11 @@ function Home() {
           <div className="slide-4"> 
             <p>Ceci est mon portfolio</p>
           </div>
+          <BtnDownload 
+          btnText={"Télécharger mon CV en PDF"}
+          fileUrl={"TEST2.pdf"}          
+          fileName={"CV_Strub_Tanguy.pdf"}
+          />
         </div>
       </main>
       <Footer/>
