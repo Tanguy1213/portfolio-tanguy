@@ -19,13 +19,15 @@
       text-decoration:underline;
     }
   }
+  @include fade-in(3s,0s);
 }
 main{
     padding-top: $header-size;
+    
 }
 .profile-picture-style{
   width: 320px;
-  @include fade-in(3s,0s);
+  
 }
 
 .slide-1 {
@@ -53,8 +55,8 @@ main{
   row-gap: 20px;
   align-items: center;
   p,h3{
-    max-width: 40%;
+    max-width: 50%;
     text-align: center;
-    @include fade-in(3s,0s);
+    
   }
 }
