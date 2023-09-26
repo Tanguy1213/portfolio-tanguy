@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import ProfilePicture from "../assets/images/Profile-picture-tanguy.png";
 import BtnDownload from "../components/BtnDownload/BtnDownload";
 import Particles from "../components/Particles";
-import Typed from "react-typed";
+
 
 function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -41,13 +41,7 @@ function Home() {
           </div>
           <div className="slide-2">
             <p>
-              Ceci est mon{" "}
-              <Typed
-                strings={["Test 1", "Test 2", "Test 3"]}
-                typeSpeed={150}
-                backSpeed={100}
-                loop
-              />
+              Ceci est mon portfolio
             </p>
           </div>
           <img
