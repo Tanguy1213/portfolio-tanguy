@@ -9,8 +9,6 @@ function Header() {
   const location = useLocation();
   const [scrolling, setScrolling] = useState(false);
 
-  
-
   const handleHomeClick = () => {
     if (location.pathname === "/") {
       // Si l'URL actuelle est celle de la page d'accueil, recharge la page
@@ -23,7 +21,8 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) { // Vous pouvez ajuster la valeur à partir de laquelle la barre se réduit
+      if (window.scrollY > 0) {
+        // Vous pouvez ajuster la valeur à partir de laquelle la barre se réduit
         setScrolling(true);
       } else {
         setScrolling(false);
@@ -41,13 +40,42 @@ function Header() {
     <header>
       <nav className={scrolling ? "scrolled" : ""}>
         <NavLink to="/" onClick={handleHomeClick}>
-          <h1><img className={scrolling ? "signature2-style" : "signature1-style"} src={scrolling ? signature2 : signature1} alt="signature design tanguy strub"></img></h1>
+          <h1>
+            <img
+              className={scrolling ? "signature2-style" : "signature1-style"}
+              src={scrolling ? signature2 : signature1}
+              alt="signature design tanguy strub"
+            ></img>
+          </h1>
         </NavLink>
         <ul>
-          <li><NavLink to="/" onClick={handleHomeClick}><h2>Accueil</h2></NavLink></li>
-          <li><NavLink><h2>Compétences</h2></NavLink></li>
-          <li><NavLink><h2>Projets</h2></NavLink></li>
-          <li><NavLink><h2>Contact</h2></NavLink></li>
+          <li>
+        <img
+              className={"signature-mobile"}
+              src={signature2}
+              alt="signature design tanguy strub"
+            ></img>
+            </li>
+          <li>
+            <NavLink to="/" onClick={handleHomeClick}>
+              <h2>Accueil</h2>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink>
+              <h2>Compétences</h2>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink>
+              <h2>Projets</h2>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink>
+              <h2>Contact</h2>
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

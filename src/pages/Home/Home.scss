@@ -1,5 +1,5 @@
-@import "../mixins.scss";
-@import "../variables.scss";
+@import "../../mixins.scss";
+@import "../../variables.scss";
 
 main {
   padding-top: $header-size;
@@ -13,22 +13,43 @@ main {
     &:hover {
       text-decoration: underline;
     }
+
   }
 }
+.layout{
+  max-width: 1350px;
+  margin: auto;
+  padding: 0px 50px 0px 50px;
+}
 .intro-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
   position: relative;
   margin-bottom: 30px;
+  .profile-section-text{
+    width: 60%;
+  }
+  h3{
+    color: white;
+    font-size: 45px;
+  }
   p {
     color: white;
+    font-size: larger;
+  }
+  .profile-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .profile-picture-style {
-  width: 400px;
+  margin-left: 30px;
+  width: 300px;
+  min-width: 150px;
   border-radius: 50px; 
   transition: transform 1.2s; /* Animation de 1 seconde pour la transformation */
   background: linear-gradient(rgb(116, 199, 110), rgba(255, 255, 255, 0));
@@ -59,8 +80,7 @@ main {
 
 .content-container {
   height: fit-content;
-  max-width: 1350px;
-  padding: 0px 25px 0px 25px;
+  
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -97,4 +117,36 @@ main {
 header,
 footer{
   @include fade-in(3s);
+}
+
+@media screen and (max-width : 760px){
+  .layout{
+    padding: 0px 25px 0px 25px;
+  }
+  .intro-container {
+    .profile-section-text{
+      width: 80%;
+    }
+    h3{
+      font-size: 45px;
+      text-align: center;
+    }
+    p {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .profile-section{
+      flex-direction: column;
+    }
+  }
+  .profile-picture-style {
+    margin-top: 20px;
+    margin-left: 0px;
+    width: 250px;
+    cursor: pointer;
+  }
+  main{
+  .navigationAnchor{
+    display: none;
+  }}
 }
