@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import ProfilePicture from "../assets/images/Profile-picture-tanguy.png"
 import BtnDownload from "../components/BtnDownload/BtnDownload";
-
+import Particles from "../components/Particles"
 function Home() {
   return (
     <div>
@@ -22,6 +22,10 @@ function Home() {
         </section>
         <div className="boxTest">
           <img className="profile-picture-style" src={ProfilePicture} alt="tanguy strub developpeur front-end web"></img>
+          <img className="profile-picture-style" src={ProfilePicture} alt="tanguy strub developpeur front-end web"></img>
+          <img className="profile-picture-style" src={ProfilePicture} alt="tanguy strub developpeur front-end web"></img>
+          <img className="profile-picture-style" src={ProfilePicture} alt="tanguy strub developpeur front-end web"></img>
+          <img className="profile-picture-style" src={ProfilePicture} alt="tanguy strub developpeur front-end web"></img>
           <div className="slide-1">
             <p>Ceci est mon portfolio</p>
           </div>
@@ -38,9 +42,10 @@ function Home() {
           btnText={"► Téléchargez mon CV ◄"}
           fileUrl={"https://drive.google.com/u/0/uc?id=1mB2xGa10rqBOQrGbTUwjKJ_JzBLwbuzf&export=download"}/>
           <a className="navigationAnchor" href="#top-page">↑ Revenir en haut de page ↑</a>
+          
         </div>
-        
       </main>
+      <Particles />
       <Footer/>
     </div>
   );

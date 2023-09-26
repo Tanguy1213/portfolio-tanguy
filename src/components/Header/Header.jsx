@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Header.scss";
-
+import signature1 from "../../assets/images/Signature-tanguy-large.png";
+import signature2 from "../../assets/images/Signature-tanguy-small.png";
 
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [scrolling, setScrolling] = useState(false);
+
+  
 
   const handleHomeClick = () => {
     if (location.pathname === "/") {
@@ -17,11 +21,27 @@ function Header() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) { // Vous pouvez ajuster la valeur à partir de laquelle la barre se réduit
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header>
-      <nav>
+      <nav className={scrolling ? "scrolled" : ""}>
         <NavLink to="/" onClick={handleHomeClick}>
-          <h1 className="titre-page">Tanguy Strub</h1>
+          <h1><img className={scrolling ? "signature2-style" : "signature1-style"} src={scrolling ? signature2 : signature1} alt="signature design tanguy strub"></img></h1>
         </NavLink>
         <ul>
           <li><NavLink to="/" onClick={handleHomeClick}><h2>Accueil</h2></NavLink></li>
