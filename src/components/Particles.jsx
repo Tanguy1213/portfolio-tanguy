@@ -32,7 +32,7 @@ const ParticlesComponent = (props) => {
         },
         links: {
           enable: true, // enabling this will make particles linked together
-          distance: 200, // maximum distance for linking the particles
+          distance: 210, // maximum distance for linking the particles
           color: {
             value:"#3a5a40",
           }
@@ -45,7 +45,7 @@ const ParticlesComponent = (props) => {
           value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
         },
         size: {
-          value: { min: 1, max: 3 }, // let's randomize the particles size a bit
+          value: { min: 1, max:3 }, // let's randomize the particles size a bit
         },
       },
       interactivity:{
@@ -58,6 +58,7 @@ const ParticlesComponent = (props) => {
         modes:{
           repulse: {
             distance:100,
+            speed: 0.15,
           }
         },
       },

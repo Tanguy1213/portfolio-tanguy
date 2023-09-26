@@ -3,6 +3,7 @@ import InstaLogo from "../../assets/images/instagram-logo.png";
 import FacebookLogo from "../../assets/images/facebook-logo.png";
 import GitLogo from "../../assets/images/github-logo.png";
 import "./Footer.scss";
+import ThemSong from "../../assets/audio/stay-song.mp3";
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
       <div className="footer-container">
         <ul>
           <li>
-            <a
+            <a className="social-link"
               href="https://www.facebook.com/tanguy.strub/"
               target="_blank"
               rel="noopener noreferrer"
@@ -23,7 +24,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a
+            <a className="social-link"
               href="https://www.instagram.com/tangzzz_mibu/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
@@ -36,7 +37,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a
+            <a className="social-link"
               href="https://github.com/Tanguy1213"
               target="_blank"
               rel="noopener noreferrer"
@@ -51,6 +52,11 @@ function Footer() {
         </ul>
         <span>Suivez mon activité</span>
       </div>
+        <audio controls>
+          <source src={ThemSong} type="audio/mpeg" />
+          Votre navigateur ne prend pas en charge l'élément audio.
+        </audio>
+        
     </footer>
   );
 }
