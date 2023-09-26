@@ -34,7 +34,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fa-brands fa-square-instagram logo-style"></i>
+              <i className="fa-brands fa-square-instagram logo-style"></i>
             </a>
           </li>
           

@@ -2,12 +2,29 @@ import React, { useState } from "react";
 import "./Home.scss";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import ProfilePicture from "../assets/images/Profile-picture-tanguy.png";
+/*import ProfilePicture from "../assets/images/Profile-picture-tanguy.png";*/
+import ProfilePicture2 from "../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../components/BtnDownload/BtnDownload";
 import Particles from "../components/Particles";
 import Loader from "../components/Loader/Loader";
 
 function Home() {
+
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleProfilePictureClick = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setIsFlipped(!isFlipped);
+      setTimeout(() => {
+        setIsAnimating(false);
+      }); // Durée de l'animation en millisecondes (ajustez selon vos besoins)
+    }
+  };
+  const profilePictureClasses = `profile-picture-style${isFlipped ? " flipped" : ""}`;
+
+
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -46,10 +63,11 @@ function Home() {
             </p>
           </div>
           <img
-            className="profile-picture-style"
-            src={ProfilePicture}
-            alt="tanguy strub developpeur front-end web"
-          ></img>
+        className={profilePictureClasses}
+        src={ProfilePicture2}
+        alt="tanguy strub developpeur front-end web"
+        onClick={handleProfilePictureClick}
+      ></img>
           <BtnDownload
             btnText={"<i class='fas fa-file-arrow-down'></i> Téléchargez mon CV"}
             fileUrl={

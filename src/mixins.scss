@@ -25,3 +25,20 @@
   }
 }
 
+@mixin flipX($duration: 1s) {
+  transform-style: preserve-3d;
+  animation: flipXAnimation $duration ease-in-out;
+  @keyframes flipXAnimation {
+    0% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(-1);
+    }
+  }
+  transform-origin: center;
+}
+
