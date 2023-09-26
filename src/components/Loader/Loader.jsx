@@ -3,14 +3,9 @@ import "./Loader.scss";
 
 function Loader() {
   return (
-    <div className="loadingio-spinner-bars-hsugtqe7ebu">
-      <div className="ldio-wvsaocdr2r">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <span>Loading...</span>
+    <div className="loader-container">
+      <span className="loader"></span>
+      <p>Loading...</p>
     </div>
   );
 }

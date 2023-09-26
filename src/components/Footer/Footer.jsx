@@ -1,7 +1,4 @@
 import React from "react";
-import InstaLogo from "../../assets/images/instagram-logo.png";
-import FacebookLogo from "../../assets/images/facebook-logo.png";
-import GitLogo from "../../assets/images/github-logo.png";
 import "./Footer.scss";
 import ThemSong from "../../assets/audio/stay-song.mp3";
 
@@ -11,52 +8,43 @@ function Footer() {
       <div className="footer-container">
         <ul>
           <li>
-            <a className="social-link"
-              href="https://www.facebook.com/tanguy.strub/"
+            <a
+              className="social-link"
+              href="https://www.linkedin.com/in/tanguy-strub-b3a954239/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="logo-style"
-                src={FacebookLogo}
-                alt="logo de facebook"
-              ></img>
+              <i className="fa-brands fa-linkedin logo-style"></i>
             </a>
           </li>
           <li>
-            <a className="social-link"
-              href="https://www.instagram.com/tangzzz_mibu/?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="logo-style"
-                src={InstaLogo}
-                alt="logo d instagram"
-              ></img>
-            </a>
-          </li>
-          <li>
-            <a className="social-link"
+            <a
+              className="social-link"
               href="https://github.com/Tanguy1213"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className="logo-style"
-                src={GitLogo}
-                alt="logo de github"
-              ></img>
+              <i className="fa-brands fa-square-github logo-style"></i>
             </a>
           </li>
+          <li>
+            <a
+              className="social-link"
+              href="https://www.instagram.com/tangzzz_mibu/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-square-instagram logo-style"></i>
+            </a>
+          </li>
+          
         </ul>
         <span>Suivez mon activité</span>
       </div>
-        <audio controls>
-          <source src={ThemSong} type="audio/mpeg" />
-          Votre navigateur ne prend pas en charge l'élément audio.
-        </audio>
-        
+      <audio controls>
+        <source src={ThemSong} type="audio/mpeg" />
+        Votre navigateur ne prend pas en charge l'élément audio.
+      </audio>
     </footer>
   );
 }

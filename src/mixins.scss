@@ -1,10 +1,3 @@
-@mixin slide-in($direction, $exectime) {
-  transform: translateX(if($direction == left, -100%, 100%));
-  animation: slide-in-animation $exectime ease forwards;
-}
-@mixin fade-in($time, $delay) {
-  animation: fade-in $time ease forwards;
-}
 @mixin LogoBounce($speed) {
   animation: LogoBounce $speed infinite alternate;
   
@@ -18,17 +11,17 @@
   }
 }
 
-@keyframes slide-in-animation {
-  to {
-    transform: translateX(0);
+@mixin fade-in($delay) {
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out $delay forwards;
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

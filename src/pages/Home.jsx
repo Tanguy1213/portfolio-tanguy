@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import ProfilePicture from "../assets/images/Profile-picture-tanguy.png";
 import BtnDownload from "../components/BtnDownload/BtnDownload";
 import Particles from "../components/Particles";
-
+import Loader from "../components/Loader/Loader";
 
 function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,6 +21,7 @@ function Home() {
 
   return (
     <div>
+      <Loader />
       <Header />
       <main id="top-page">
         <section className="welcome-container">
@@ -36,10 +37,10 @@ function Home() {
           </p>
         </section>
         <section className="intro-container">
-          <div className="slide-1">
+          <div>
             <p>Ceci est mon portfolio</p>
           </div>
-          <div className="slide-2">
+          <div>
             <p>
               Ceci est mon portfolio
             </p>
@@ -50,7 +51,7 @@ function Home() {
             alt="tanguy strub developpeur front-end web"
           ></img>
           <BtnDownload
-            btnText={"Téléchargez mon CV"}
+            btnText={"<i class='fas fa-file-arrow-down'></i> Téléchargez mon CV"}
             fileUrl={
               "https://drive.google.com/u/0/uc?id=1mB2xGa10rqBOQrGbTUwjKJ_JzBLwbuzf&export=download"
             }

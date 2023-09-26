@@ -23,26 +23,12 @@ main {
   padding-top: 40px;
   position: relative;
   margin-bottom: 30px;
-  @include fade-in(3s, 0s);
   p {
     color: white;
   }
 }
 .profile-picture-style {
   width: 320px;
-}
-
-.slide-1 {
-  @include slide-in(left, 1.5s);
-}
-.slide-2 {
-  @include slide-in(right, 1.8s);
-}
-.slide-3 {
-  @include slide-in(left, 2.1s);
-}
-.slide-4 {
-  @include slide-in(right, 2.4s);
 }
 
 .welcome-container {
@@ -65,24 +51,27 @@ main {
 
 .content-container {
   height: fit-content;
-  width: 100%;
+  width: 80%;
+  padding: 0px 50px 0px 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: auto;
   gap: 10px;
+  
   .content1 {
-    width: 80%;
+    width: 100%;
     height: 300px;
     background-color: rgb(88, 88, 88, 0.9);
     border-radius: 25px;
   }
   .content-wrapper1 {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    
+
     .content2,
     .content3,
     .content4 {
@@ -92,4 +81,12 @@ main {
       border-radius: 25px;
     }
   }
+}
+
+.welcome-container,
+.intro-container,
+.content-container,
+header,
+footer{
+  @include fade-in(3s);
 }
