@@ -72,7 +72,7 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink>
+            <NavLink to="/Contact">
               <h2>Contact</h2>
             </NavLink>
           </li>

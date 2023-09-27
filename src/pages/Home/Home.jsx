@@ -6,7 +6,6 @@ import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import Loader from "../../components/Loader/Loader";
-import ContactForm from "../../components/ContactForm/ContactForm";
 
 function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -94,9 +93,7 @@ function Home() {
             </div>
             <div className="content1"></div>
           </section>
-          <section>
-            <ContactForm />
-          </section>
+
         </div>
         <a
           className="navigationAnchor"
