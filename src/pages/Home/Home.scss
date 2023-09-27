@@ -28,22 +28,43 @@ main {
   padding-top: 40px;
   position: relative;
   margin-bottom: 30px;
-  .profile-section-text{
-    width: 60%;
-  }
-  h3{
-    color: white;
-    font-size: 45px;
-  }
-  p {
-    color: white;
-    font-size: larger;
-  }
   .profile-section{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .profile-section-text{
+      width: 60%;
+      font-style: italic;
+      @media screen and (max-width: 760px) {
+        width: 80%;
+      }
+      .typedTitle{
+        color: white;
+        font-size: 60px;
+        @media screen and (max-width: 760px) {
+          font-size: calc(60px*0.7);
+        }
+        @media screen and (max-width: 425px) {
+          font-size: calc(60px*0.5);
+        }
+      }
+    }
+  }
+}
+.paragraphTyped{
+  font-size: 50px;
+  color: white;
+  @media screen and (max-width: 760px) {
+    min-height: 181px;
+    font-size: calc(50px*0.7);
+  }
+  @media screen and (max-width: 425px) {
+    font-size: calc(60px*0.4);
+    min-height: 101px;
+  }
+  .typedText{
+    color: rgba(43, 136, 36, 0.944);
   }
 }
 .profile-picture-style {
@@ -116,6 +137,7 @@ main {
 .intro-container,
 .content-container,
 header,
+.navigationAnchor,
 footer{
   @include fade-in(3s);
 }

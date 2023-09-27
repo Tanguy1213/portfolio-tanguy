@@ -6,6 +6,7 @@ import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import Loader from "../../components/Loader/Loader";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -35,6 +36,11 @@ function Home() {
     ? "fa-solid fa-angles-up fa-xl fa-bounce"
     : "fa-solid fa-angles-up fa-xl";
 
+  const [typedText] = useTypewriter({
+    words: [" Front-end", " JavaScript", " React"],
+    loop: {},
+  });
+
   return (
     <div>
       <Loader />
@@ -43,28 +49,28 @@ function Home() {
         <section className="welcome-container">
           <h3>Bienvenue sur mon portfolio !</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Bienvenue sur mon site portfolio de développeur ! Ici, vous
+            découvrirez mon parcours professionnel, mes compétences en
+            développement, et mes projets les plus récents. Explorez mon
+            portfolio pour en apprendre davantage sur mes réalisations. Que
+            vous soyez un recruteur à la recherche de talents ou simplement
+            curieux d'en savoir plus sur mon travail, je vous invite à parcourir
+            ces pages pour plonger dans mon univers créatif. Merci de votre
+            visite et n'hésitez pas à me contacter pour discuter de projets
+            futurs.
           </p>
         </section>
         <div className="layout">
           <section className="intro-container">
             <div className="profile-section">
               <div className="profile-section-text">
-                <h3>Adieu c't'équipe</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <h3 className="typedTitle">Bonjour,</h3>
+                <p className="paragraphTyped">
+                  Je m'appel Tanguy, j'ai 26 ans et je suis developpeur
+                  <span className="typedText">{typedText}</span>
+                  <span>
+                    <Cursor />
+                  </span>
                 </p>
               </div>
 
@@ -76,9 +82,7 @@ function Home() {
               ></img>
             </div>
             <BtnDownload
-              btnText={
-                " Téléchargez mon CV"
-              }
+              btnText={" Téléchargez mon CV"}
               fileUrl={
                 "https://drive.google.com/u/0/uc?id=1mB2xGa10rqBOQrGbTUwjKJ_JzBLwbuzf&export=download"
               }
@@ -93,7 +97,6 @@ function Home() {
             </div>
             <div className="content1"></div>
           </section>
-
         </div>
         <a
           className="navigationAnchor"
