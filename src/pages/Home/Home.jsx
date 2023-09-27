@@ -5,7 +5,6 @@ import Footer from "../../components/Footer/Footer";
 import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
-import Loader from "../../components/Loader/Loader";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 function Home() {
@@ -43,7 +42,6 @@ function Home() {
 
   return (
     <div>
-      <Loader />
       <Header />
       <main id="top-page">
         <section className="welcome-container">

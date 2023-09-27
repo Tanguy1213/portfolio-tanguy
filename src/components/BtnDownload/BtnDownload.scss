@@ -13,6 +13,9 @@
   border-radius: var(--border-width);
   text-decoration: none;
   margin-top: 30px;
+  &:active{
+    scale: 0.95;
+  }
   span{
     color: white;
     z-index: 3;

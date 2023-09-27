@@ -58,7 +58,7 @@ const ParticlesComponent = (props) => {
         modes:{
           repulse: {
             distance:100,
-            speed: 0.15,
+            speed: 0.2,
           }
         },
       },
