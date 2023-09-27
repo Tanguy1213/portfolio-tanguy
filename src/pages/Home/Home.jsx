@@ -77,7 +77,7 @@ function Home() {
             </div>
             <BtnDownload
               btnText={
-                "<i class='fas fa-file-arrow-down'></i> Téléchargez mon CV"
+                " Téléchargez mon CV"
               }
               fileUrl={
                 "https://drive.google.com/u/0/uc?id=1mB2xGa10rqBOQrGbTUwjKJ_JzBLwbuzf&export=download"

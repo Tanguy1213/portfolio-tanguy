@@ -3,8 +3,8 @@ import "./BtnDownload.scss"
 
 function BtnDownload({ btnText, fileUrl}) {
     
-  return (
-        <a href={fileUrl} className="btn-link"><span dangerouslySetInnerHTML={{ __html: btnText }} /></a> 
+  return ( 
+      <a className=" gradient-border" href={fileUrl}><span><i className='fas fa-file-arrow-down'></i>{btnText}</span></a> 
   );
 }
 

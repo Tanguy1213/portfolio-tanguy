@@ -1,49 +1,69 @@
 @import "../../variables.scss";
-
-.btn-link {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 40px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
-  border-radius: 5px;
-  letter-spacing: 2px;
-  text-align: center;
+.gradient-border {
+  --border-width: 2px;
   position: relative;
-  transition: all 0.35s;
-  padding-left: 15px;
-  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 30px;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  background: black;
+  border-radius: var(--border-width);
+  text-decoration: none;
   margin-top: 30px;
-  span {
-    position: relative;
-    z-index: 2;
+  span{
+    color: white;
+    z-index: 3;
   }
-  &:after {
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      $background-color,
+      $secondary-color,
+      $light-green-color,
+      $dark-green-color,
+      $darken-green-color
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+  &::before{
     position: absolute;
     content: "";
     top: 0;
     left: 0;
-    width: 0;
+    width: 0%;
     height: 100%;
-    border-radius: 5px;
     background: linear-gradient(
       to left,
-      $secondary-color,
       $light-green-color,
+      $dark-green-color,
+      $darken-green-color
         
     );
-    transition: all 0.35s;
+    transition: width 0.35s;
+    border-radius: var(--border-width);
   }
-  &:hover {
-    color: #fff;
+  &:hover{
+    &:before{
+      width: 100%;
+    }
   }
-  &:hover:after {
-    width: 100%;
-  }
-  &:active{
-    scale: 0.975;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
   }
 }

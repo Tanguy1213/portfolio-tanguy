@@ -52,10 +52,11 @@ main {
   min-width: 150px;
   border-radius: 50px; 
   transition: transform 1.2s; /* Animation de 1 seconde pour la transformation */
-  background: linear-gradient(rgb(116, 199, 110), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(43, 136, 36, 0.944), rgba(255, 255, 255, 0));
   cursor: pointer;
+  position: relative;
+  
 }
-
 .profile-picture-style.flipped {
   transform: rotateY(360deg); /* Effectue un retournement horizontal */
 }
@@ -149,4 +150,21 @@ footer{
   .navigationAnchor{
     display: none;
   }}
+  .welcome-container {
+    width: 100%;
+    height: fit-content;
+    padding: 3rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    p,
+    h3 {
+      max-width: 100%;
+      text-align: center;
+    }
+  } 
 }
