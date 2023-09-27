@@ -24,8 +24,23 @@ function ContactForm() {
 
   return (
     <div>
-      <form name="contact" method="post" className="contactForm" onSubmit={handleSubmit}>
-        {/* Vos champs de formulaire ici */}
+      <form
+        name="contact"
+        method="post"
+        className="contactForm"
+        onSubmit={handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact"/>
+        <label>Nom :</label>
+        <input type="text" name="name" required={true} />
+        <label>Email :</label>
+        <input type="email" name="email" required={true} />
+        <label>Message :</label>
+        <textarea
+          name="message"
+          required={true}
+          placeholder="Entrez votre message ici !"
+        ></textarea>
         <button type="submit">Envoyer</button>
       </form>
 
