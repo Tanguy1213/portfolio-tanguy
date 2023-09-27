@@ -24,7 +24,7 @@
 }
 .contact-content,
 .goBack-link{
-    @include fade-in(3s);
+    @include fade-in(0.1s);
 }
 .goBack-link{
     position: absolute;

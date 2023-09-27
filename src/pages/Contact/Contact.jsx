@@ -2,12 +2,10 @@ import "./Contact.scss";
 import Particles from "../../components/Particles";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { NavLink } from "react-router-dom";
-import Loader from "../../components/Loader/Loader";
 
 function Contact() {
   return (
     <div className="layout-contact">
-      <Loader />
       <div className="goBack-link">
         <NavLink to="/">
           <i className="fa-solid fa-left-long fa-2xl"></i>

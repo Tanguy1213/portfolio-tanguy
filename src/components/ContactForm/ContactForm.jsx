@@ -3,7 +3,7 @@ import "./ContactForm.scss";
 
 function ContactForm() {
   return (
-      <form name="contact" method="post" className="contactForm">
+      <form name="contact" method="post" className="contactForm" action="/ContactSucces">
       <input type="hidden" name="form-name" value="contact" />
       
             <label>Nom :</label> 
