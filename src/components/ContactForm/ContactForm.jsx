@@ -7,13 +7,13 @@ function ContactForm() {
       <form name="contact" method="post" className="contactForm">
       <input type="hidden" name="form-name" value="contact" />
             <label>Your Name:</label> 
-            <input type="text" name="name" required/>
+            <input type="text" name="name" required="true"/>
           
             <label>Your Email:</label> 
-            <input type="email" name="email" required/>
+            <input type="email" name="email" required="true"/>
           
             <label>Message: </label>
-            <textarea name="message" required></textarea>
+            <textarea name="message" required="true"></textarea>
           
             <button type="submit">Send</button>
           
