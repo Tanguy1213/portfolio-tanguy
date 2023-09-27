@@ -6,14 +6,11 @@ function ContactForm() {
     <div className="contact">
       <form name="contact" method="post" className="contactForm">
       <input type="hidden" name="form-name" value="contact" />
-            <label>Your Name:</label> 
-            <input type="text" name="name" required="true"/>
+            <label>Your Name: <input type="text" name="name"/></label>
           
-            <label>Your Email:</label> 
-            <input type="email" name="email" required="true"/>
+            <label>Your Email: <input type="email" name="email"/></label>
           
-            <label>Message: </label>
-            <textarea name="message" required="true"></textarea>
+            <label>Message: <textarea name="message"></textarea></label>
           
             <button type="submit">Send</button>
           
