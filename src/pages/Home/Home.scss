@@ -72,14 +72,15 @@ main {
   width: 320px;
   min-width: 150px;
   border-radius: 50px; 
-  transition: transform 1.2s; /* Animation de 1 seconde pour la transformation */
+  transition: transform 1s ease; 
   background: linear-gradient(rgba(43, 136, 36, 0.944), rgba(255, 255, 255, 0));
   cursor: pointer;
   position: relative;
-  
-}
-.profile-picture-style.flipped {
-  transform: rotateY(360deg); /* Effectue un retournement horizontal */
+
+  &.flipped {
+    transform: rotateY(360deg);
+    /* Effectue un retournement horizontal */
+  }
 }
 
 .welcome-container {

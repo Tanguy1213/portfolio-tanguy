@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -12,28 +12,35 @@ import Loader from "../../components/Loader/Loader";
 function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isClickable, setIsClickable] = useState(true);
 
   const handleProfilePictureClick = () => {
-    if (!isAnimating) {
+    if (!isAnimating && isClickable) {
       setIsAnimating(true);
       setIsFlipped(!isFlipped);
-      setTimeout(() => {
-        setIsAnimating(false);
-      }); // Durée de l'animation en millisecondes (ajustez selon vos besoins)
     }
   };
-  const profilePictureClasses = `profile-picture-style${
-    isFlipped ? " flipped" : ""
-  }`;
 
-  const [isHovered, setIsHovered] = useState(false);
+  useEffect(() => {
+    if (isAnimating) {
+      setTimeout(() => {
+        setIsAnimating(false);
+        setIsClickable(true); // Réactivez la possibilité de cliquer après l'animation
+      }, 1000);
+      setIsClickable(false); // Désactivez la possibilité de cliquer pendant l'animation
+    }
+  }, [isAnimating]);
+
+  const profilePictureClasses = `profile-picture-style${isFlipped ? " flipped" : ""}`;
+
+  const [iconeIsHovered, seticoneIsHovered] = useState(false);
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    seticoneIsHovered(true);
   };
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    seticoneIsHovered(false);
   };
-  const faGoingUpIcone = isHovered
+  const faGoingUpIcone = iconeIsHovered
     ? "fa-solid fa-angles-up fa-xl fa-bounce"
     : "fa-solid fa-angles-up fa-xl";
 
