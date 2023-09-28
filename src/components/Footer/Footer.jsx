@@ -13,6 +13,7 @@ function Footer() {
               href="https://www.linkedin.com/in/tanguy-strub-b3a954239/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Lien vers Linkedin"
             >
               <i className="fa-brands fa-linkedin logo-style"></i>
             </a>
@@ -23,6 +24,7 @@ function Footer() {
               href="https://github.com/Tanguy1213"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Lien vers github"
             >
               <i className="fa-brands fa-square-github logo-style"></i>
             </a>
@@ -33,6 +35,7 @@ function Footer() {
               href="https://www.instagram.com/tangzzz_mibu/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Lien vers instagram"
             >
               <i className="fa-brands fa-square-instagram logo-style"></i>
             </a>

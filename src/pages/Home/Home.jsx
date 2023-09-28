@@ -78,7 +78,7 @@ function Home() {
               <div className="profile-section-text">
                 <h3 className="typedTitle">Bonjour,</h3>
                 <p className="paragraphTyped">
-                  Je m'appelle Tanguy Strub, j'ai 26 ans et je suis developpeur{" "}
+                  Je m'appelle Tanguy Strub, j'ai 26 ans et je suis développeur{" "}
                   <br></br>
                   <span className="typedText">{typedText}</span>
                   <span>
@@ -121,6 +121,7 @@ function Home() {
           href="#top-page"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          aria-label="Revenir en haut de la page"
         >
           <i className={faGoingUpIcone}></i>
         </a>
