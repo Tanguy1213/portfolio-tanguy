@@ -82,7 +82,7 @@ function Home() {
                 onClick={handleProfilePictureClick}
               ></img>
               <img
-                
+                className="not-displayed"
                 src={MetaCard}
                 alt="tanguy strub developpeur front-end web"
               ></img>
