@@ -3,6 +3,7 @@ import "./Home.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
+import MetaCard from "../../assets/images/card-img.png"
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -79,6 +80,11 @@ function Home() {
                 src={ProfilePicture2}
                 alt="tanguy strub developpeur front-end web"
                 onClick={handleProfilePictureClick}
+              ></img>
+              <img
+                
+                src={MetaCard}
+                alt="tanguy strub developpeur front-end web"
               ></img>
             </div>
             <BtnDownload
