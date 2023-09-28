@@ -6,6 +6,7 @@ import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import Loader from "../../components/Loader/Loader";
 
 function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -42,6 +43,7 @@ function Home() {
 
   return (
     <div>
+      <Loader />
       <Header />
       <main id="top-page">
         <section className="welcome-container">
@@ -105,6 +107,7 @@ function Home() {
           <i className={faGoingUpIcone}></i>
         </a>
       </main>
+      
       <Particles />
       <Footer />
     </div>

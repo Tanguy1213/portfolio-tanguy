@@ -10,6 +10,7 @@ function ContactForm() {
     email: "",
     message: "",
   });
+  const [isFormValid, setIsFormValid] = useState(false); // État pour gérer la validité du formulaire
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -25,12 +26,12 @@ function ContactForm() {
     })
       .then(() => {
         openModal();
-        // Réinitialisez les valeurs des champs après la soumission réussie
         setFormData({
           name: "",
           email: "",
           message: "",
         });
+        setIsFormValid(false); // Réinitialisez la validité du formulaire
       })
       .catch((error) => {
         console.error("Erreur lors de la soumission du formulaire :", error);
@@ -39,11 +40,20 @@ function ContactForm() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    // Mettez à jour l'état local formData lorsque les champs changent
-    setFormData({
+    const updatedFormData = {
       ...formData,
       [name]: value,
-    });
+    };
+  
+    // Vérifiez la validité du formulaire en vérifiant si tous les champs sont remplis
+    const isFormValid =
+      updatedFormData.name !== "" &&
+      updatedFormData.email !== "" &&
+      updatedFormData.message !== "";
+  
+    // Mettez à jour l'état local du formulaire et sa validité
+    setFormData(updatedFormData);
+    setIsFormValid(isFormValid);
   };
 
   return (
@@ -55,31 +65,40 @@ function ContactForm() {
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
-        <label>Nom :</label>
         <input
           type="text"
           name="name"
           required={true}
-          value={formData.name} // Utilisez la valeur de l'état local
-          onChange={handleChange} // Utilisez la fonction de gestion du changement
+          className="input-style"
+          placeholder="Nom"
+          value={formData.name}
+          onChange={handleChange}
         />
-        <label>Email :</label>
         <input
           type="email"
           name="email"
           required={true}
-          value={formData.email} // Utilisez la valeur de l'état local
-          onChange={handleChange} // Utilisez la fonction de gestion du changement
+          className="input-style"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
         />
-        <label>Message :</label>
         <textarea
           name="message"
           required={true}
+          className="input-style"
           placeholder="Entrez votre message ici!"
-          value={formData.message} // Utilisez la valeur de l'état local
-          onChange={handleChange} // Utilisez la fonction de gestion du changement
+          value={formData.message}
+          onChange={handleChange}
         ></textarea>
-        <button type="submit">Envoyer</button>
+        {/* Appliquez des classes CSS en fonction de la validité du formulaire */}
+        <button
+          type="submit"
+          className={isFormValid ? "valid-button" : "invalid-button"}
+          disabled={!isFormValid}
+        >
+          Envoyer
+        </button>
       </form>
       {/* Modal */}
       <Modal
