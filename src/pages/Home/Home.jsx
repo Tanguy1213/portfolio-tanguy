@@ -66,7 +66,7 @@ function Home() {
               <div className="profile-section-text">
                 <h3 className="typedTitle">Bonjour,</h3>
                 <p className="paragraphTyped">
-                  Je m'appel Tanguy, j'ai 26 ans et je suis developpeur
+                  Je m'appelle Tanguy Strub, j'ai 26 ans et je suis developpeur <br></br>
                   <span className="typedText">{typedText}</span>
                   <span>
                     <Cursor />

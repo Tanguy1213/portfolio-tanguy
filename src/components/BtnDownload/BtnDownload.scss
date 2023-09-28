@@ -13,10 +13,10 @@
   border-radius: var(--border-width);
   text-decoration: none;
   margin-top: 30px;
-  &:active{
+  &:active {
     scale: 0.95;
   }
-  span{
+  span {
     color: white;
     z-index: 3;
   }
@@ -42,7 +42,7 @@
     border-radius: calc(2 * var(--border-width));
     animation: moveGradient 4s alternate infinite;
   }
-  &::before{
+  &::before {
     position: absolute;
     content: "";
     top: 0;
@@ -54,14 +54,12 @@
       $light-green-color,
       $dark-green-color,
       $darken-green-color
-        
     );
     transition: width 0.35s;
     border-radius: var(--border-width);
-    
   }
-  &:hover{
-    &:before{
+  &:hover {
+    &:before {
       width: 100%;
     }
   }

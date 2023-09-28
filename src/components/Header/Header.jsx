@@ -50,12 +50,12 @@ function Header() {
         </NavLink>
         <ul>
           <li>
-        <img
+            <img
               className={"signature-mobile"}
               src={signature2}
               alt="signature design tanguy strub"
             ></img>
-            </li>
+          </li>
           <li>
             <NavLink to="/" onClick={handleHomeClick}>
               <h2 className="nav-link">Accueil</h2>

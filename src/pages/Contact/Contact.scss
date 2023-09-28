@@ -1,46 +1,54 @@
 @import "../../mixins.scss";
 @import "../../variables.scss";
 
-.layout-contact{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
+.layout-contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.contact-content{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 25px;
-    .form-title{
-        color: white;
+.contact-content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 25px;
+  .form-title {
+    color: white;
+    @media screen and (max-width: 570px) {
+      font-size: 20px;
     }
+  }
 }
 .contact-content,
-.goBack-link{
-    @include fade-in(0.1s);
+.goBack-link {
+  @include fade-in(0.1s);
 }
-.goBack-link{
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    i{
-        color: white;
-    }
-    &:hover{
-        scale: 1.2;
-    }
-}
-
-.contact-section{
-    width: 600px;
-    background: rgba(139, 146, 138, 0.499);
-    border-radius: 25px;
+.goBack-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  @media screen and (max-width: 570px) {
+    font-size: small;
+  }
+  i {
+    color: white;
+  }
+  &:hover {
+    scale: 1.2;
+  }
 }
 
+.contact-section {
+  background: rgba(139, 146, 138, 0.499);
+  border-radius: 25px;
+  @media screen and (max-width: 570px) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

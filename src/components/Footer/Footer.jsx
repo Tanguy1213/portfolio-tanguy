@@ -37,7 +37,6 @@ function Footer() {
               <i className="fa-brands fa-square-instagram logo-style"></i>
             </a>
           </li>
-          
         </ul>
         <span>Suivez mon activité</span>
       </div>

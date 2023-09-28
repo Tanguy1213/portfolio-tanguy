@@ -3,7 +3,6 @@ import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
 //import { loadFull } from "tsparticles"; // loads tsparticles
 import { useCallback, useMemo } from "react";
 
-
 // tsParticles Repository: https://github.com/matteobruni/tsparticles
 // tsParticles Website: https://particles.js.org/
 const ParticlesComponent = (props) => {
@@ -21,21 +20,21 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value:"#FFFFFF",
+          value: "#FFFFFF",
         },
-        number:{
-          value : 30,
+        number: {
+          value: 30,
           density: {
-            enable:true,
-            value_area:800,
+            enable: true,
+            value_area: 800,
           },
         },
         links: {
           enable: true, // enabling this will make particles linked together
           distance: 210, // maximum distance for linking the particles
           color: {
-            value:"#3a5a40",
-          }
+            value: "#3a5a40",
+          },
         },
         move: {
           enable: true, // enabling this will make particles move in the canvas
@@ -45,21 +44,21 @@ const ParticlesComponent = (props) => {
           value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
         },
         size: {
-          value: { min: 1, max:3 }, // let's randomize the particles size a bit
+          value: { min: 1, max: 3 }, // let's randomize the particles size a bit
         },
       },
-      interactivity:{
-        events : {
+      interactivity: {
+        events: {
           onHover: {
             enable: true,
             mode: "repulse",
           },
         },
-        modes:{
+        modes: {
           repulse: {
-            distance:100,
+            distance: 100,
             speed: 0.2,
-          }
+          },
         },
       },
     };

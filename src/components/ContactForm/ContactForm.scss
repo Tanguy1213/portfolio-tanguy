@@ -1,79 +1,123 @@
-form { max-width:420px; margin:50px auto; }
+form {
+  max-width: 420px;
+  margin: 50px;
+
+  @media screen and (max-width: 570px) {
+    margin: 25px;
+    max-width: 380px;
+  }
+}
 
 .input-style {
-    color:white;
-    font-weight:500;
-    font-size: 18px;
-    border-radius: 5px;
-    line-height: 22px;
-    background-color: transparent;
-    border:2px solid #00ff0080;
-    transition: all 0.3s;
-    padding: 13px;
-    margin-bottom: 15px;
-    width:100%;
-    box-sizing: border-box;
-    outline:0;
-  }
-  
-  .input-style:focus { border:2px solid #00ff00; }
-  
-  textarea {
-    height: 150px;
-    line-height: 150%;
-    resize:vertical;
-  }
-  
-  [type="submit"] {
-    width: 100%;
-    background:#00ff0080;
-    border-radius:5px;
-    border: none;
-    cursor:pointer;
-    color:white;
-    font-size:24px;
-    padding-top:10px;
-    padding-bottom:10px;
-    transition: all 0.3s;
-    margin-top:-4px;
-    font-weight:700;
-  }
-  /* Style pour le bouton lorsque le formulaire est valide */
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #00ff0080;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.input-style:focus {
+  border: 2px solid #00ff00;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #00ff0080;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+/* Style pour le bouton lorsque le formulaire est valide */
 .valid-button {
-    background-color: #00ff0080; /* Couleur de fond lorsque le formulaire est valide */
-    color: #fff; /* Couleur du texte */
-    cursor: pointer; /* Curseur pointer pour indiquer qu'il est cliquable */
-  }
-  
-  /* Style pour le bouton lorsque le formulaire est invalide */
-  .invalid-button {
-    background-color: #ccc; /* Couleur de fond lorsque le formulaire est invalide (gris) */
-    color: #666; /* Couleur du texte en gris */
-    cursor: not-allowed; /* Curseur interdit pour indiquer qu'il n'est pas cliquable */
-  }
+  background-color: #00ff0080;
+  /* Couleur de fond lorsque le formulaire est valide */
+  color: #fff;
+  /* Couleur du texte */
+  cursor: pointer;
+  /* Curseur pointer pour indiquer qu'il est cliquable */
+}
+
+/* Style pour le bouton lorsque le formulaire est invalide */
+.invalid-button {
+  background-color: #ccc;
+  /* Couleur de fond lorsque le formulaire est invalide (gris) */
+  color: #666;
+  /* Couleur du texte en gris */
+  cursor: not-allowed;
+  /* Curseur interdit pour indiquer qu'il n'est pas cliquable */
+}
 
 .custom-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 35px;
+
+  @media screen and (max-width: 570px) {
+    width: 70%;
+    font-size: 80%;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
   }
-  
-  /* Style pour le fond de la modal */
-  .custom-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+
+  .modal-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
+
+  .closemodal-btn {
+    border: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+/* Style pour le fond de la modal */
+.custom-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}

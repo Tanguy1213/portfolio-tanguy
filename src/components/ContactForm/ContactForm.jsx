@@ -44,13 +44,13 @@ function ContactForm() {
       ...formData,
       [name]: value,
     };
-  
+
     // Vérifiez la validité du formulaire en vérifiant si tous les champs sont remplis
     const isFormValid =
       updatedFormData.name !== "" &&
       updatedFormData.email !== "" &&
       updatedFormData.message !== "";
-  
+
     // Mettez à jour l'état local du formulaire et sa validité
     setFormData(updatedFormData);
     setIsFormValid(isFormValid);
@@ -87,11 +87,11 @@ function ContactForm() {
           name="message"
           required={true}
           className="input-style"
-          placeholder="Entrez votre message ici!"
+          placeholder="Entrez votre message ici !"
           value={formData.message}
           onChange={handleChange}
         ></textarea>
-        {/* Appliquez des classes CSS en fonction de la validité du formulaire */}
+
         <button
           type="submit"
           className={isFormValid ? "valid-button" : "invalid-button"}
@@ -110,8 +110,15 @@ function ContactForm() {
       >
         <h2>Message envoyé avec succès!</h2>
         <p>Merci pour votre message.</p>
-        <NavLink to="/">Retour à la page d'accueil</NavLink>
-        <button onClick={() => setIsModalOpen(false)}>Fermer</button>
+        <NavLink to="/" className="modal-link">
+          Retour à la page d'accueil
+        </NavLink>
+        <button
+          className="closemodal-btn"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <i className="fa-solid fa-xmark fa-xl"></i>
+        </button>
       </Modal>
     </div>
   );

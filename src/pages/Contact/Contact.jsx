@@ -8,13 +8,12 @@ function Contact() {
     <div className="layout-contact">
       <div className="goBack-link">
         <NavLink to="/">
-          <i className="fa-solid fa-left-long fa-2xl"></i>
+          <i className="fa-solid fa-circle-arrow-left fa-xl"></i>
         </NavLink>
       </div>
       <main className="contact-content">
-      <h1 className="form-title">Formulaire de contact</h1>
+        <h1 className="form-title">Formulaire de contact</h1>
         <section className="contact-section">
-            
           <ContactForm />
         </section>
       </main>
