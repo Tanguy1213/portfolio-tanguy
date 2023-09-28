@@ -93,11 +93,6 @@ function Home() {
                 alt="tanguy strub developpeur front-end web"
                 onClick={handleProfilePictureClick}
               ></img>
-              <img
-                className="not-displayed"
-                src={MetaCard}
-                alt="tanguy strub developpeur front-end web"
-              ></img>
             </div>
             <BtnDownload
               btnText={" Téléchargez mon CV"}
