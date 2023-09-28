@@ -1,0 +1,65 @@
+/* Styles pour CompetenceBar */
+.competence-bar {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  .competence-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-align: start;
+  }
+  
+  .competence-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .competence-icon {
+    padding: 10px;
+    font-size: 24px;
+  }
+  
+  .competence-progress {
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .competence-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ccc; /* Couleur de la barre de fond */
+    z-index: 1;
+  }
+  
+  .competence-fill {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s ease-in-out;
+    z-index: 2;
+  }
+  
+ 
+  /* Pourcentage de remplissage en animation */
+  @keyframes fill-animation {
+    0% {
+      width: 0;
+    }
+  }
+  
+  /* Exemple d'animation de remplissage */
+  .competence-fill.animated {
+    animation: fill-animation 2s ease-in-out;
+  }

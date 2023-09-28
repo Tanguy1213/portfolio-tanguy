@@ -7,6 +7,7 @@ import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Loader from "../../components/Loader/Loader";
+import CompBar from "../../components/CompBar/CompBar";
 
 function Home() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -100,14 +101,42 @@ function Home() {
               }
             />
           </section>
-          <section className="content-container">
-            <div className="content1"></div>
-            <div className="content-wrapper1">
-              <div className="content2"></div>
-              <div className="content3"></div>
-              <div className="content4"></div>
-            </div>
-            <div className="content1"></div>
+          <div className="titre-section">
+            <h2>&#60;</h2>
+            <h2 className="color-first-letter">Compétences</h2>
+            <h2>&#62;</h2>
+          </div>
+          <section className="competences-container">
+            <CompBar
+              titre="Compétence 1"
+              icone={<i className="fa fa-code"></i>}
+              pourcentage={75}
+              couleur="grey"
+            />
+            <CompBar
+              titre="Compétence 2"
+              icone={<i className="fa fa-code"></i>}
+              pourcentage={94}
+              couleur="green"
+            />
+            <CompBar
+              titre="Compétence 3"
+              icone={<i className="fa fa-code"></i>}
+              pourcentage={25}
+              couleur="blue"
+            />
+            <CompBar
+              titre="Compétence 4"
+              icone={<i className="fa fa-code"></i>}
+              pourcentage={48}
+              couleur="yellow"
+            />
+            <CompBar
+              titre="Compétence 5"
+              icone={<i className="fa fa-code"></i>}
+              pourcentage={70}
+              couleur="red"
+            />
           </section>
         </div>
         <a

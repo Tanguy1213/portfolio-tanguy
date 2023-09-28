@@ -3,9 +3,9 @@
 
 main {
   padding-top: $header-size;
-  @media screen and (max-width: 768px){
-padding-top:50px;
-}
+  @media screen and (max-width: 768px) {
+    padding-top: 50px;
+  }
   .navigationAnchor {
     position: fixed;
     right: 15px;
@@ -16,10 +16,9 @@ padding-top:50px;
     &:hover {
       text-decoration: underline;
     }
-
   }
 }
-.layout{
+.layout {
   max-width: 1350px;
   margin: auto;
   padding: 0px 50px 0px 50px;
@@ -28,45 +27,45 @@ padding-top:50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 200px;
   position: relative;
-  margin-bottom: 30px;
-  .profile-section{
+  margin-bottom: 180px;
+  .profile-section {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .profile-section-text{
+    .profile-section-text {
       width: 45%;
       font-style: italic;
       @media screen and (max-width: 760px) {
         width: 80%;
       }
-      .typedTitle{
+      .typedTitle {
         color: white;
         font-size: 40px;
         @media screen and (max-width: 760px) {
-          font-size: calc(60px*0.7);
+          font-size: calc(60px * 0.7);
         }
         @media screen and (max-width: 425px) {
-          font-size: calc(60px*0.5);
+          font-size: calc(60px * 0.5);
         }
       }
     }
   }
 }
-.paragraphTyped{
+.paragraphTyped {
   font-size: 40px;
   color: white;
   @media screen and (max-width: 760px) {
     min-height: 181px;
-    font-size: calc(50px*0.7);
+    font-size: calc(50px * 0.7);
   }
   @media screen and (max-width: 425px) {
-    font-size: calc(60px*0.4);
+    font-size: calc(60px * 0.4);
     min-height: 101px;
   }
-  .typedText{
+  .typedText {
     color: rgba(43, 136, 36, 0.944);
   }
 }
@@ -74,8 +73,8 @@ padding-top:50px;
   margin-left: 30px;
   width: 320px;
   min-width: 150px;
-  border-radius: 50px; 
-  transition: transform 1s ease; 
+  border-radius: 50px;
+  transition: transform 1s ease;
   background: linear-gradient(rgba(43, 136, 36, 0.944), rgba(255, 255, 255, 0));
   cursor: pointer;
   position: relative;
@@ -97,49 +96,40 @@ padding-top:50px;
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
-  
+
   h3 {
     max-width: 50%;
     text-align: center;
   }
-  p{
+  p {
     text-align: center;
     font-size: 18px;
     max-width: 684px;
   }
 }
-
-.content-container {
-  height: fit-content;
-  
+.titre-section{
+  color: white;
+  width: 100%;
+  font-size: 45px;
+  display :flex;
+  justify-content: center;
+  font-style: italic;
+}
+.color-first-letter{
+  &::first-letter {
+    color: $light-green-color;
+  }
+}
+.competences-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: auto;
   gap: 10px;
-  
-  .content1 {
-    width: 100%;
-    height: 300px;
-    background-color: rgb(88, 88, 88, 0.9);
-    border-radius: 25px;
-  }
-  .content-wrapper1 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-
-    .content2,
-    .content3,
-    .content4 {
-      width: 30%;
-      height: 300px;
-      background-color: rgb(88, 88, 88);
-      border-radius: 25px;
-    }
-  }
+  width: 100%;
+  height: 800px;
+  background-color: rgb(88, 88, 88, 0.9);
+  border-radius: 25px;
 }
 
 .welcome-container,
@@ -147,19 +137,20 @@ padding-top:50px;
 .content-container,
 header,
 .navigationAnchor,
-footer{
+footer {
   @include fade-in(2.5s);
 }
 
-@media screen and (max-width : 760px){
-  .layout{
+@media screen and (max-width: 760px) {
+  .layout {
     padding: 0px 25px 0px 25px;
   }
   .intro-container {
-    .profile-section-text{
+    margin-bottom: 100px;
+    .profile-section-text {
       width: 80%;
     }
-    h3{
+    h3 {
       font-size: 45px;
       text-align: center;
     }
@@ -167,7 +158,7 @@ footer{
       margin-top: 20px;
       text-align: center;
     }
-    .profile-section{
+    .profile-section {
       flex-direction: column;
     }
   }
@@ -177,18 +168,19 @@ footer{
     width: 280px;
     cursor: pointer;
   }
-  main{
-  .navigationAnchor{
-    display: none;
-  }}
+  main {
+    .navigationAnchor {
+      display: none;
+    }
+  }
 }
-@media screen and (max-width : 425px){
-  .welcome-container{
+@media screen and (max-width: 425px) {
+  .welcome-container {
     padding: 2rem 3rem;
-    h3{
+    h3 {
       font-size: 16.8px;
     }
-    p{
+    p {
       font-size: 16px;
     }
   }
