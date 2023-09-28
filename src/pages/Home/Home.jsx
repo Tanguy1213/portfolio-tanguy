@@ -3,7 +3,7 @@ import "./Home.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
-import MetaCard from "../../assets/images/card-img.png"
+import MetaCard from "../../assets/images/card-img.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -31,7 +31,9 @@ function Home() {
     }
   }, [isAnimating]);
 
-  const profilePictureClasses = `profile-picture-style${isFlipped ? " flipped" : ""}`;
+  const profilePictureClasses = `profile-picture-style${
+    isFlipped ? " flipped" : ""
+  }`;
 
   const [iconeIsHovered, seticoneIsHovered] = useState(false);
   const handleMouseEnter = () => {
@@ -60,8 +62,10 @@ function Home() {
             Bienvenue sur mon site portfolio de développeur ! Ici, vous
             découvrirez mon parcours professionnel, mes compétences en
             développement, et mes projets les plus récents. Explorez mon
-            portfolio pour en apprendre davantage sur mes réalisations. Que
-            vous soyez un recruteur à la recherche de talents ou simplement
+            portfolio pour en apprendre davantage sur mes réalisations.
+          </p>{" "}
+          <p>
+            Que vous soyez un recruteur à la recherche de talents ou simplement
             curieux d'en savoir plus sur mon travail, je vous invite à parcourir
             ces pages pour plonger dans mon univers créatif. Merci de votre
             visite et n'hésitez pas à me contacter pour discuter de projets
@@ -74,7 +78,8 @@ function Home() {
               <div className="profile-section-text">
                 <h3 className="typedTitle">Bonjour,</h3>
                 <p className="paragraphTyped">
-                  Je m'appelle Tanguy Strub, j'ai 26 ans et je suis developpeur <br></br>
+                  Je m'appelle Tanguy Strub, j'ai 26 ans et je suis developpeur{" "}
+                  <br></br>
                   <span className="typedText">{typedText}</span>
                   <span>
                     <Cursor />
@@ -120,7 +125,7 @@ function Home() {
           <i className={faGoingUpIcone}></i>
         </a>
       </main>
-      
+
       <Particles />
       <Footer />
     </div>
