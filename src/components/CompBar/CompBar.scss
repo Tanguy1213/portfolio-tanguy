@@ -10,6 +10,7 @@
     padding-left: 74px;
     text-align: start;
     font-weight: bold;
+    
   }
   
   .competence-container {
@@ -21,7 +22,7 @@
     border-radius: 0px 25px 25px 0px;
     overflow: hidden;
     border: solid 1px rgb(53, 53, 53);
-   
+    
   }
   
   .competence-icon {
@@ -30,6 +31,14 @@
     i{
       width: 50px;
       height: 50px;
+    }
+    &:hover{
+      cursor: pointer;
+      scale: 1.1;
+      transition: all 0.2s ease-in-out;
+    }
+    &:active{
+      scale: 0.98;
     }
   }
   .competence-wrapper{

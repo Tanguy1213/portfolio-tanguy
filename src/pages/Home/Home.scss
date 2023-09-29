@@ -114,6 +114,13 @@ main {
   display :flex;
   justify-content: center;
   font-style: italic;
+  @media  screen and (max-width:768px) {
+    font-size: 35px;
+  }
+  @media  screen and (max-width:425px) {
+    font-size: 25px;
+  }
+
 }
 .color-first-letter{
   &::first-letter {
@@ -131,6 +138,13 @@ main {
   background-color: rgb(88, 88, 88, 0.9);
   border-radius: 25px;
   padding : 3rem;
+  margin-top: 40px;
+  @media  screen and (max-width:768px) {
+    padding : 2rem;
+  }
+  @media  screen and (max-width:425px) {
+    padding: 1rem;
+  }
 }
 
 .welcome-container,
@@ -148,6 +162,7 @@ footer {
   }
   .intro-container {
     margin-bottom: 100px;
+    margin-top:100px;
     .profile-section-text {
       width: 80%;
     }
@@ -184,5 +199,8 @@ footer {
     p {
       font-size: 16px;
     }
+  }
+  .intro-container {
+    margin-top: 60px;
   }
 }
