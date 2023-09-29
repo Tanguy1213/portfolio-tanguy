@@ -1,6 +1,21 @@
 @import "../../mixins.scss";
 @import "../../variables.scss";
 
+/* Masquer la barre de défilement du body de la page */
+body {
+  overflow: hidden;
+}
+
+/* Attendre 2,5 secondes, puis réactivation la barre de défilement */
+body.loading {
+  overflow: hidden;
+}
+
+/* Réactivation de la barre de défilement */
+body.loaded {
+  overflow: auto;
+}
+
 main {
   padding-top: $header-size;
   @media screen and (max-width: 768px) {

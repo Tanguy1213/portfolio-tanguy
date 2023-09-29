@@ -67,6 +67,18 @@ function Home() {
     }, 1000); // 1 secondes de délais
   }, []);
 
+  //Gestion de l'apparition et disparition de la barre défilement
+  useEffect(() => {
+    // Désactivez la barre de défilement en ajoutant la classe "loading" au body
+    document.body.classList.add('loading');
+
+    // Attendez 2,5 secondes, puis réactivez la barre de défilement en remplaçant la classe "loading" par "loaded"
+    setTimeout(() => {
+      document.body.classList.remove('loading');
+      document.body.classList.add('loaded');
+    }, 2500); // 2500 millisecondes = 2,5 secondes
+  }, []);
+
   return (
     <div>
       <Loader />
