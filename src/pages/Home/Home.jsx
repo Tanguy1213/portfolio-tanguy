@@ -10,18 +10,18 @@ import Loader from "../../components/Loader/Loader";
 import CompBar from "../../components/CompBar/CompBar";
 
 function Home() {
+  //Gestion de l'animation de la photo de profil ---A retirer ?---
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isClickable, setIsClickable] = useState(true);
-
   const handleProfilePictureClick = () => {
     if (!isAnimating && isClickable) {
       setIsAnimating(true);
       setIsFlipped(!isFlipped);
     }
   };
-
   useEffect(() => {
+    //Observation de si l'élément est en animation, si oui il n'est plus cliquable et inversement
     if (isAnimating) {
       setTimeout(() => {
         setIsAnimating(false);
@@ -30,11 +30,12 @@ function Home() {
       setIsClickable(false); // Désactivez la possibilité de cliquer pendant l'animation
     }
   }, [isAnimating]);
-
   const profilePictureClasses = `profile-picture-style${
+    //Changement de classe en fonction de si l'image est flipped ou non, activant l'animation CSS de flipX
     isFlipped ? " flipped" : ""
   }`;
 
+  //Gestion de l'animation de l'icone de retour en haut de page
   const [iconeIsHovered, seticoneIsHovered] = useState(false);
   const handleMouseEnter = () => {
     seticoneIsHovered(true);
@@ -42,14 +43,29 @@ function Home() {
   const handleMouseLeave = () => {
     seticoneIsHovered(false);
   };
-  const faGoingUpIcone = iconeIsHovered
+  const faGoingUpIcone = iconeIsHovered // En fonction du state de Hover on applique (ou non) la classe FontAwesome de bounce
     ? "fa-solid fa-angles-up fa-xl fa-bounce"
     : "fa-solid fa-angles-up fa-xl";
 
+  //Paramètres du TypeText
   const [typedText] = useTypewriter({
     words: [" Front-end", " JavaScript", " React"],
     loop: {},
   });
+
+  //délais pour l'affichage des barres de compétences pour éviter un micro affichage et le déclenchement du remplissage non voulu
+  useEffect(() => {
+    const competencesContainer = document.querySelector(
+      ".competences-container"
+    );
+
+    // Utilisez setTimeout pour ajouter la classe "visible" après 2,5 secondes (2500 millisecondes)
+    setTimeout(() => {
+      if (competencesContainer) {
+        competencesContainer.classList.add("visible");
+      }
+    }, 1000); // 1 secondes de délais
+  }, []);
 
   return (
     <div>

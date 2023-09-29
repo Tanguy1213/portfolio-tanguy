@@ -25,6 +25,18 @@
   }
 }
 
+@mixin display-on($delay){
+  animation: display-on 0s ease-in-out $delay forwards;
+  @keyframes display-on {
+    0% {
+      display: none;
+    }
+    100% {
+      display: flex;
+    }
+  }
+}
+
 @mixin flipX($duration: 1s) {
   transform-style: preserve-3d;
   animation: flipXAnimation $duration ease-in-out;

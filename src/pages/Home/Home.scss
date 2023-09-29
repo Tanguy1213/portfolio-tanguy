@@ -128,7 +128,7 @@ main {
   }
 }
 .competences-container {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   margin: auto;
@@ -145,16 +145,19 @@ main {
   @media  screen and (max-width:425px) {
     padding: 1rem;
   }
+  &.visible{
+    display: flex;
+  }
 }
 
 .welcome-container,
-.intro-container,
-.content-container,
+.layout,
 header,
 .navigationAnchor,
 footer {
   @include fade-in(2.5s);
 }
+
 
 @media screen and (max-width: 760px) {
   .layout {
