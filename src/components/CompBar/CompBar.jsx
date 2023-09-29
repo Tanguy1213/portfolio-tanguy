@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { lighten, rgb } from 'polished';
 import PropTypes from "prop-types";
 import "./CompBar.scss";
 
@@ -10,7 +11,8 @@ const CompBar = ({ titre, pourcentage, couleur, icone }) => {
   const fillStyle = {
     //Style pour le remplissage pour que la couleur corresponde a une prop tout come le % de remplissage
     width: `${pourcentageActuel}%`,
-    backgroundColor: couleur,
+    backgroundColor: `rgb(88, 129, 87)`,
+    borderRight: `4px solid ${lighten(0.5, rgb(88, 129, 87))}`
   };
   const iconStyle = {
     //Style de l'icone pour matcher avec la couleur de la barre

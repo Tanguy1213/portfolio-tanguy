@@ -9,7 +9,12 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Loader from "../../components/Loader/Loader";
 import CompBar from "../../components/CompBar/CompBar";
 
-function Home() {
+function Home() { 
+  window.onload = function () {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+    }, 0);
+  };
   //Gestion de l'animation de la photo de profil ---A retirer ?---
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -56,7 +61,7 @@ function Home() {
   //délais pour l'affichage des barres de compétences pour éviter un micro affichage et le déclenchement du remplissage non voulu
   useEffect(() => {
     const competencesContainer = document.querySelector(
-      ".competences-container"
+      ".competence-section"
     );
 
     // Utilisez setTimeout pour ajouter la classe "visible" après 2,5 secondes (2500 millisecondes)
@@ -134,24 +139,24 @@ function Home() {
             <h2 className="color-first-letter">Compétences</h2>
             <h2>&#62;</h2>
           </div>
-          <section className="competences-container">
+          <section className="competence-section">
             <CompBar
               titre="Javascript"
               icone={<i className="fa-brands fa-square-js"></i>}
               pourcentage={40}
-              couleur="#f0db4f"
+              couleur="rgb(240, 219, 79)"
             />
             <CompBar
               titre="HTML5"
               icone={<i className="fa-brands fa-html5"></i>}
               pourcentage={75}
-              couleur="#e34c26"
+              couleur="rgb(227, 76, 38)"
             />
             <CompBar
               titre="CSS3"
               icone={<i className="fa-brands fa-css3-alt"></i>}
               pourcentage={80}
-              couleur="	#2965f1"
+              couleur="rgb(41, 101, 241)"
             />
           </section>
         </div>
