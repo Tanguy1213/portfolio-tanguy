@@ -108,34 +108,22 @@ function Home() {
           </div>
           <section className="competences-container">
             <CompBar
-              titre="Compétence 1"
-              icone={<i className="fa fa-code"></i>}
+              titre="Javascript"
+              icone={<i className="fa-brands fa-square-js"></i>}
+              pourcentage={40}
+              couleur="#f0db4f"
+            />
+            <CompBar
+              titre="HTML5"
+              icone={<i className="fa-brands fa-html5"></i>}
               pourcentage={75}
-              couleur="grey"
+              couleur="#e34c26"
             />
             <CompBar
-              titre="Compétence 2"
-              icone={<i className="fa fa-code"></i>}
-              pourcentage={94}
-              couleur="green"
-            />
-            <CompBar
-              titre="Compétence 3"
-              icone={<i className="fa fa-code"></i>}
-              pourcentage={25}
-              couleur="blue"
-            />
-            <CompBar
-              titre="Compétence 4"
-              icone={<i className="fa fa-code"></i>}
-              pourcentage={48}
-              couleur="yellow"
-            />
-            <CompBar
-              titre="Compétence 5"
-              icone={<i className="fa fa-code"></i>}
-              pourcentage={70}
-              couleur="red"
+              titre="CSS3"
+              icone={<i className="fa-brands fa-css3-alt"></i>}
+              pourcentage={80}
+              couleur="	#2965f1"
             />
           </section>
         </div>
