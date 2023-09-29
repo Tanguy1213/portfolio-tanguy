@@ -9,7 +9,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Loader from "../../components/Loader/Loader";
 import CompBar from "../../components/CompBar/CompBar";
 
-function Home() { 
+function Home() {
   window.onload = function () {
     setTimeout(function () {
       window.scrollTo(0, 0);
@@ -60,9 +60,7 @@ function Home() {
 
   //délais pour l'affichage des barres de compétences pour éviter un micro affichage et le déclenchement du remplissage non voulu
   useEffect(() => {
-    const competencesContainer = document.querySelector(
-      ".competence-section"
-    );
+    const competencesContainer = document.querySelector(".competence-section");
 
     // Utilisez setTimeout pour ajouter la classe "visible" après 2,5 secondes (2500 millisecondes)
     setTimeout(() => {
@@ -75,12 +73,12 @@ function Home() {
   //Gestion de l'apparition et disparition de la barre défilement
   useEffect(() => {
     // Désactivez la barre de défilement en ajoutant la classe "loading" au body
-    document.body.classList.add('loading');
+    document.body.classList.add("loading");
 
     // Attendez 2,5 secondes, puis réactivez la barre de défilement en remplaçant la classe "loading" par "loaded"
     setTimeout(() => {
-      document.body.classList.remove('loading');
-      document.body.classList.add('loaded');
+      document.body.classList.remove("loading");
+      document.body.classList.add("loaded");
     }, 2500); // 2500 millisecondes = 2,5 secondes
   }, []);
 
@@ -105,7 +103,7 @@ function Home() {
             futurs.
           </p>
         </section>
-        <div className="layout">
+        <div className="layout-cut">
           <section className="intro-container">
             <div className="profile-section">
               <div className="profile-section-text">
@@ -134,30 +132,45 @@ function Home() {
               }
             />
           </section>
+        </div>
+        <div className="layout-full">
           <div className="titre-section">
             <h2>&#60;</h2>
             <h2 className="color-first-letter">Compétences</h2>
             <h2>&#62;</h2>
           </div>
-          <section className="competence-section">
+          <section className="competence-section" >
             <CompBar
               titre="Javascript"
               icone={<i className="fa-brands fa-square-js"></i>}
               pourcentage={40}
-              couleur="rgb(240, 219, 79)"
+            />
+            <CompBar
+              titre="React"
+              icone={<i className="fa-brands fa-react"></i>}
+              pourcentage={80}
+            />
+            <CompBar
+              titre="Node.js"
+              icone={<i className="fa-brands fa-node-js"></i>}
+              pourcentage={80}
             />
             <CompBar
               titre="HTML5"
               icone={<i className="fa-brands fa-html5"></i>}
-              pourcentage={75}
-              couleur="rgb(227, 76, 38)"
+              pourcentage={90}
             />
             <CompBar
               titre="CSS3"
               icone={<i className="fa-brands fa-css3-alt"></i>}
-              pourcentage={80}
-              couleur="rgb(41, 101, 241)"
+              pourcentage={90}
             />
+            <CompBar
+              titre="SASS"
+              icone={<i className="fa-brands fa-sass"></i>}
+              pourcentage={70}
+            />
+            
           </section>
         </div>
         <a

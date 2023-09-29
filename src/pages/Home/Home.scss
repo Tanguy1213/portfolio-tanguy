@@ -33,16 +33,21 @@ main {
     }
   }
 }
-.layout {
+.layout-cut {
   max-width: 1350px;
   margin: auto;
-  padding: 0px 50px 0px 50px;
+  padding: 0px 45px 0px 45px;
+}
+.layout-full {
+  max-width: 100%;
+  margin: auto;
+  padding: 0px;
 }
 .intro-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 150px;
   position: relative;
   margin-bottom: 180px;
   .profile-section {
@@ -115,10 +120,11 @@ main {
   h3 {
     max-width: 50%;
     text-align: center;
+    font-size: 20px;
   }
   p {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     max-width: 684px;
   }
 }
@@ -144,16 +150,22 @@ main {
 }
 .competence-section {
   display: none;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
+  position: relative;
   margin: auto;
   gap: 10px;
   width: 100%;
   height: auto;
-  background-color: rgb(88, 88, 88, 0.9);
-  border-radius: 25px;
-  padding : 3rem;
+  background-image: url(../../assets/images/competences-background.png);
+  @media screen and (max-width:425px){
+    background-position: bottom left;
+  }
+  background-color: rgba(219, 218, 218, 0.116);
+  border-radius: 0px;
+  padding : 4rem;
   margin-top: 40px;
+
   @media  screen and (max-width:768px) {
     padding : 2rem;
   }
@@ -166,7 +178,8 @@ main {
 }
 
 .welcome-container,
-.layout,
+.layout-cut,
+.layout-full,
 header,
 .navigationAnchor,
 footer {
@@ -180,7 +193,7 @@ footer {
   }
   .intro-container {
     margin-bottom: 100px;
-    margin-top:100px;
+    margin-top:60px;
     .profile-section-text {
       width: 80%;
     }
@@ -219,6 +232,6 @@ footer {
     }
   }
   .intro-container {
-    margin-top: 60px;
+    margin-top: 0px;
   }
 }

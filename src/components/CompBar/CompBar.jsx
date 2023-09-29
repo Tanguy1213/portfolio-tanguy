@@ -3,7 +3,7 @@ import { lighten, rgb } from 'polished';
 import PropTypes from "prop-types";
 import "./CompBar.scss";
 
-const CompBar = ({ titre, pourcentage, couleur, icone }) => {
+const CompBar = ({ titre, pourcentage, icone }) => {
   //Gestion du remplissage des barres et du pourcentage
   const [remplir, setRemplir] = useState(false);
   const [pourcentageActuel, setPourcentageActuel] = useState(0);
@@ -16,7 +16,7 @@ const CompBar = ({ titre, pourcentage, couleur, icone }) => {
   };
   const iconStyle = {
     //Style de l'icone pour matcher avec la couleur de la barre
-    color: couleur,
+    color:"rgb(241, 235, 235)",
   };
 
   useEffect(() => {
@@ -85,7 +85,6 @@ const CompBar = ({ titre, pourcentage, couleur, icone }) => {
 CompBar.propTypes = {
   titre: PropTypes.string.isRequired,
   pourcentage: PropTypes.number.isRequired,
-  couleur: PropTypes.string.isRequired,
 };
 
 export default CompBar;
