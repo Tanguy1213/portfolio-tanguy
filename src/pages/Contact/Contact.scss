@@ -2,26 +2,23 @@
 @import "../../variables.scss";
 
 .layout-contact {
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
 }
 
 .contact-content {
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 25px;
+  row-gap: 35px;
+  margin-top: 15vh;
   @media screen and (max-width: 570px) {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 50px;
+    margin-top: 50px;
   }
   .form-title {
     color: white;
@@ -63,6 +60,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-top: 65px;
   @media screen and (max-width: 570px) {
     width: 100%;
   }

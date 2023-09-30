@@ -1,60 +1,73 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
 
-header {
-  height: $header-size;
+.header-container {
   position: fixed;
   width: 100%;
-  z-index: 1;
-  @media screen and (max-width: 768px){
+  z-index: 4;
+  @media screen and (max-width: 768px) {
     height: 50px;
-}
-  a {
-    text-decoration: none;
-    color: white;
-    width: fit-content;
-    height: fit-content;
   }
-  .scrolled {
-    height: 50px;
-    padding: 0rem 3rem 0rem 3rem;
-    box-shadow: 0px 5px 20px #00ff0080;
-    @media screen and (max-width: 768px) {
-      padding: 1rem 0.5rem 1rem 0.5rem;
-    }
-  }
-  nav {
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    z-index: 3;
+  .navigation-container {
     background: rgb(241, 235, 235);
     box-shadow: 0px 10px 40px #00ff0080;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 6rem 1rem 6rem;
-    transition: height 0.3s ease;
+    transition: height 0.1s ease;
     @media screen and (max-width: 768px) {
       height: 50px;
-      padding: 1rem 0.5rem 1rem 0.5rem;
       box-shadow: 0px 5px 20px #00ff0080;
     }
-    ul {
-      width: fit-content;
+    .list-nav-link {
+      width: 80%;
       height: fit-content;
       display: flex;
       flex-direction: row;
       gap: 50px;
       align-items: center;
+      justify-content: flex-end;
       list-style: none;
+      color: white;
       @media screen and (max-width: 768px) {
-        justify-content: space-between;
         width: 100%;
+        justify-content: space-around;
         gap: 0;
       }
+      .nav-link {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        @media screen and (max-width: 425px) {
+          font-size: 13px;
+        }
+        &::first-letter {
+          color: $light-green-color;
+        }
+        &::after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 0;
+          background: $light-green-color;
+          transition: width 0.2s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
     }
+  }
+  .scrolled {
+    height: 50px;
+    box-shadow: 0px 5px 20px #00ff0080;
+  }
+}
+.titre-de-la-page {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 .signature1-style {
@@ -77,25 +90,4 @@ header {
   }
 }
 
-.nav-link {
-  font-size: 20px;
-  font-weight: 600;
-  color: black;
-  @media screen and (max-width: 768px) {
-    font-size: 15px;
-  }
-  &::first-letter {
-    color: $light-green-color;
-  }
-  &::after {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0;
-    background: $light-green-color;
-    transition: width 0.2s ease-in-out;
-  }
-  &:hover::after {
-    width: 100%;
-  }
-}
+

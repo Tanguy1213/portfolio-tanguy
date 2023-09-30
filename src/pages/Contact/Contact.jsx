@@ -2,6 +2,7 @@ import "./Contact.scss";
 import Particles from "../../components/Particles";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { NavLink } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 function Contact() {
   return (
@@ -37,6 +38,7 @@ function Contact() {
           </a>
         </section>
       </main>
+      <Loader />
       <Particles />
     </div>
   );

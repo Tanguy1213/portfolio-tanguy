@@ -6,15 +6,10 @@ import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import Loader from "../../components/Loader/Loader";
+
 import CompBar from "../../components/CompBar/CompBar";
 
 function Home() {
-  window.onload = function () {
-    setTimeout(function () {
-      window.scrollTo(0, 0);
-    }, 0);
-  };
   //Gestion de l'animation de la photo de profil ---A retirer ?---
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -58,57 +53,32 @@ function Home() {
     loop: {},
   });
 
-  //délais pour l'affichage des barres de compétences pour éviter un micro affichage et le déclenchement du remplissage non voulu
-  useEffect(() => {
-    const competencesContainer = document.querySelector(".competence-section");
-
-    // Utilisez setTimeout pour ajouter la classe "visible" après 2,5 secondes (2500 millisecondes)
-    setTimeout(() => {
-      if (competencesContainer) {
-        competencesContainer.classList.add("visible");
-      }
-    }, 1000); // 1 secondes de délais
-  }, []);
-
-  //Gestion de l'apparition et disparition de la barre défilement
-  useEffect(() => {
-    // Désactivez la barre de défilement en ajoutant la classe "loading" au body
-    document.body.classList.add("loading");
-
-    // Attendez 2,5 secondes, puis réactivez la barre de défilement en remplaçant la classe "loading" par "loaded"
-    setTimeout(() => {
-      document.body.classList.remove("loading");
-      document.body.classList.add("loaded");
-    }, 2500); // 2500 millisecondes = 2,5 secondes
-  }, []);
-
   return (
     <div>
-      <Loader />
-      <Header />
-      <main id="top-page">
-        <section className="welcome-container">
-          <h3>Bienvenue sur mon portfolio !</h3>
-          <p>
-            Bienvenue sur mon site portfolio de développeur ! Ici, vous
-            découvrirez mon parcours professionnel, mes compétences en
-            développement, et mes projets les plus récents. Explorez mon
-            portfolio pour en apprendre davantage sur mes réalisations.
-          </p>{" "}
-          <p>
-            Que vous soyez un recruteur à la recherche de talents ou simplement
-            curieux d'en savoir plus sur mon travail, je vous invite à parcourir
-            ces pages pour plonger dans mon univers créatif. Merci de votre
-            visite et n'hésitez pas à me contacter pour discuter de projets
-            futurs.
-          </p>
-        </section>
-        <div className="layout-cut">
-          <section className="intro-container">
-            <div className="profile-section">
-              <div className="profile-section-text">
-                <h3 className="typedTitle">Bonjour,</h3>
-                <p className="paragraphTyped">
+      <div className="home-container">
+        <Header />
+        <main id="top-page">
+          <section className="welcome-section">
+            <h3>Bienvenue sur mon portfolio !</h3>
+            <p>
+              Bienvenue sur mon site portfolio de développeur ! Ici, vous
+              découvrirez mon parcours professionnel, mes compétences en
+              développement, et mes projets les plus récents. Explorez mon
+              portfolio pour en apprendre davantage sur mes réalisations.
+            </p>{" "}
+            <p>
+              Que vous soyez un recruteur à la recherche de talents ou
+              simplement curieux d'en savoir plus sur mon travail, je vous
+              invite à parcourir ces pages pour plonger dans mon univers
+              créatif. Merci de votre visite et n'hésitez pas à me contacter
+              pour discuter de projets futurs.
+            </p>
+          </section>
+          <section className="intro-section">
+            <div className="intro-wrapper">
+              <div className="intro-text-container">
+                <h3>Bonjour,</h3>
+                <p className="intro-paragrahpe">
                   Je m'appelle Tanguy Strub, j'ai 26 ans et je suis développeur{" "}
                   <br></br>
                   <span className="typedText">{typedText}</span>
@@ -117,7 +87,6 @@ function Home() {
                   </span>
                 </p>
               </div>
-
               <img
                 className={profilePictureClasses}
                 src={ProfilePicture2}
@@ -132,14 +101,12 @@ function Home() {
               }
             />
           </section>
-        </div>
-        <div className="layout-full">
-          <div className="titre-section">
+          <div className="competence-title">
             <h2>&#60;</h2>
             <h2 className="color-first-letter">Compétences</h2>
             <h2>&#62;</h2>
           </div>
-          <section className="competence-section" >
+          <section className="competence-section">
             <CompBar
               titre="Javascript"
               icone={<i className="fa-brands fa-square-js"></i>}
@@ -170,22 +137,20 @@ function Home() {
               icone={<i className="fa-brands fa-sass"></i>}
               pourcentage={70}
             />
-            
           </section>
-        </div>
-        <a
-          className="navigationAnchor"
-          href="#top-page"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          aria-label="Revenir en haut de la page"
-        >
-          <i className={faGoingUpIcone}></i>
-        </a>
-      </main>
-
+          <a
+            className="navigationAnchor"
+            href="#top-page"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            aria-label="Revenir en haut de la page"
+          >
+            <i className={faGoingUpIcone}></i>
+          </a>
+        </main>
+        <Footer />
+      </div>
       <Particles />
-      <Footer />
     </div>
   );
 }

@@ -1,114 +1,27 @@
 @import "../../mixins.scss";
 @import "../../variables.scss";
 
-/* Masquer la barre de défilement du body de la page */
-body {
-  overflow: hidden;
+.home-container {
+  @include fade-in(0.1s);
 }
-
-/* Attendre 2,5 secondes, puis réactivation la barre de défilement */
-body.loading {
-  overflow: hidden;
-}
-
-/* Réactivation de la barre de défilement */
-body.loaded {
-  overflow: auto;
-}
-
-main {
-  padding-top: $header-size;
-  @media screen and (max-width: 768px) {
-    padding-top: 50px;
-  }
-  .navigationAnchor {
-    position: fixed;
-    right: 15px;
-    bottom: 50%;
-    text-decoration: none;
-    color: white;
-    height: 20px;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-.layout-cut {
-  max-width: 1350px;
-  margin: auto;
-  padding: 0px 45px 0px 45px;
-}
-.layout-full {
-  max-width: 100%;
-  margin: auto;
-  padding: 0px;
-}
-.intro-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 150px;
-  position: relative;
-  margin-bottom: 180px;
-  .profile-section {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .profile-section-text {
-      width: 45%;
-      font-style: italic;
-      @media screen and (max-width: 760px) {
-        width: 80%;
-      }
-      .typedTitle {
-        color: white;
-        font-size: 40px;
-        @media screen and (max-width: 760px) {
-          font-size: calc(60px * 0.7);
-        }
-        @media screen and (max-width: 425px) {
-          font-size: calc(60px * 0.5);
-        }
-      }
-    }
-  }
-}
-.paragraphTyped {
-  font-size: 40px;
+.navigationAnchor {
+  position: fixed;
+  right: 15px;
+  bottom: 50%;
+  text-decoration: none;
   color: white;
-  @media screen and (max-width: 760px) {
-    min-height: 181px;
-    font-size: calc(50px * 0.7);
-  }
-  @media screen and (max-width: 425px) {
-    font-size: calc(60px * 0.4);
-    min-height: 101px;
-  }
-  .typedText {
-    color: rgba(43, 136, 36, 0.944);
-  }
-}
-.profile-picture-style {
-  margin-left: 30px;
-  width: 320px;
-  min-width: 150px;
-  border-radius: 50px;
-  transition: transform 1s ease;
-  background: linear-gradient(rgba(43, 136, 36, 0.944), rgba(255, 255, 255, 0));
-  cursor: pointer;
-  position: relative;
-
-  &.flipped {
-    transform: rotateY(360deg);
-    /* Effectue un retournement horizontal */
+  height: 20px;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 
-.welcome-container {
+.welcome-section {
   width: 100%;
+  padding-top: 150px;
+  padding-left: 25px;
+  padding-right: 25px;
   height: fit-content;
-  padding: 3rem;
   background-color: black;
   color: white;
   display: flex;
@@ -116,7 +29,6 @@ main {
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
-
   h3 {
     max-width: 50%;
     text-align: center;
@@ -128,110 +40,100 @@ main {
     max-width: 684px;
   }
 }
-.titre-section{
+
+.intro-section {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom:70px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .intro-wrapper {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    @media screen and (max-width:768px) {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 70px;
+      margin-bottom: 70px;
+      row-gap: 70px;
+    }
+    .intro-text-container {
+      width: 50%;
+      font-style: italic;
+      color: white;
+      font-size: 40px;
+      @media screen and (max-width: 768px) {
+        width: 80%;
+        font-size: 30px;
+      }
+      .intro-paragrahpe { 
+        .typedText {
+          color: rgba(43, 136, 36, 0.944);
+        }
+      }
+    }
+    .profile-picture-style {
+      width: 300px;
+      height: 100%;
+      min-width: 150px;
+      border-radius: 50px;
+      transition: transform 1s ease;
+      cursor: pointer;
+      background: linear-gradient(
+        rgba(43, 136, 36, 0.793),
+        rgba(255, 255, 255, 0)
+      );
+      &.flipped {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+}
+
+//COMPETENCES
+.competence-title {
   color: white;
   width: 100%;
   font-size: 45px;
-  display :flex;
+  display: flex;
   justify-content: center;
   font-style: italic;
-  @media  screen and (max-width:768px) {
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
     font-size: 35px;
   }
-  @media  screen and (max-width:425px) {
+  @media screen and (max-width: 425px) {
     font-size: 25px;
   }
-
-}
-.color-first-letter{
-  &::first-letter {
-    color: $light-green-color;
+  .color-first-letter {
+    &::first-letter {
+      color: $light-green-color;
+    }
   }
 }
 .competence-section {
+  padding: 5rem 2rem 5rem 2rem;
   display: none;
   align-items: flex-end;
   flex-direction: column;
   position: relative;
-  margin: auto;
-  gap: 10px;
   width: 100%;
-  height: auto;
   background-image: url(../../assets/images/competences-background.png);
-  @media screen and (max-width:425px){
-    background-position: bottom left;
-  }
-  background-color: rgba(219, 218, 218, 0.116);
-  border-radius: 0px;
-  padding : 4rem;
-  margin-top: 40px;
-
-  @media  screen and (max-width:768px) {
-    padding : 2rem;
-  }
-  @media  screen and (max-width:425px) {
+  background-color: rgba(219, 218, 218, 0.1);
+  background-position: top left;
+  @media screen and (max-width: 425px) {
     padding: 1rem;
+    background-size: cover;
+    background-position: top left;
   }
-  &.visible{
+  &.visible {
     display: flex;
-  }
-}
-
-.welcome-container,
-.layout-cut,
-.layout-full,
-header,
-.navigationAnchor,
-footer {
-  @include fade-in(2.5s);
-}
-
-
-@media screen and (max-width: 760px) {
-  .layout {
-    padding: 0px 25px 0px 25px;
-  }
-  .intro-container {
-    margin-bottom: 100px;
-    margin-top:60px;
-    .profile-section-text {
-      width: 80%;
-    }
-    h3 {
-      font-size: 45px;
-      text-align: center;
-    }
-    p {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .profile-section {
-      flex-direction: column;
-    }
-  }
-  .profile-picture-style {
-    margin-top: 20px;
-    margin-left: 0px;
-    width: 280px;
-    cursor: pointer;
-  }
-  main {
-    .navigationAnchor {
-      display: none;
-    }
-  }
-}
-@media screen and (max-width: 425px) {
-  .welcome-container {
-    padding: 2rem 3rem;
-    h3 {
-      font-size: 16.8px;
-    }
-    p {
-      font-size: 16px;
-    }
-  }
-  .intro-container {
-    margin-top: 0px;
   }
 }

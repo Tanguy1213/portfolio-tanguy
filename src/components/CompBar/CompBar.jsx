@@ -60,9 +60,21 @@ const CompBar = ({ titre, pourcentage, icone }) => {
     };
   }, []);
 
+  //délais pour l'affichage des barres de compétences pour éviter un micro affichage et le déclenchement du remplissage non voulu
+  useEffect(() => {
+    const competencesContainer = document.querySelector(".competence-section");
+
+    // Utilisez setTimeout pour ajouter la classe "visible" après 2,5 secondes (2500 millisecondes)
+    setTimeout(() => {
+      if (competencesContainer) {
+        competencesContainer.classList.add("visible");
+      }
+    }, 200); // 1 secondes de délais
+  }, []);
+
   return (
     <div className="competence-bar" ref={barRef}>
-      <div className="competence-title">{titre}</div>
+      <div className="competence-name">{titre}</div>
       <div className="competence-wrapper">
         <div className="competence-icon" style={iconStyle}>
           {icone}

@@ -30,7 +30,6 @@ function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -38,46 +37,56 @@ function Header() {
 
   return (
     <header>
-      <nav className={scrolling ? "scrolled" : ""}>
-        <NavLink to="/" onClick={handleHomeClick}>
-          <h1>
-            <img
-              className={scrolling ? "signature2-style" : "signature1-style"}
-              src={scrolling ? signature2 : signature1}
-              alt="signature design tanguy strub"
-            ></img>
-          </h1>
-        </NavLink>
-        <ul>
-          <li>
-            <img
-              className={"signature-mobile"}
-              src={signature2}
-              alt="signature design tanguy strub"
-            ></img>
-          </li>
-          <li>
-            <NavLink to="/" onClick={handleHomeClick}>
-              <h2 className="nav-link">Accueil</h2>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink>
-              <h2 className="nav-link">Compétences</h2>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink>
-              <h2 className="nav-link">Projets</h2>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Contact">
-              <h2 className="nav-link">Contact</h2>
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+      <div className="header-container">
+        <nav
+          className={
+            scrolling ? "scrolled navigation-container" : "navigation-container"
+          }
+        >
+          <NavLink
+            to="/"
+            onClick={handleHomeClick}
+            className="titre-de-la-page"
+          >
+            <h1 >
+              <img
+                className={scrolling ? "signature2-style" : "signature1-style"}
+                src={scrolling ? signature2 : signature1}
+                alt="signature design tanguy strub"
+              ></img>
+            </h1>
+          </NavLink>
+          <ul className="list-nav-link">
+            <li>
+              <img
+                className={"signature-mobile"}
+                src={signature2}
+                alt="signature design tanguy strub"
+              ></img>
+            </li>
+            <li>
+              <NavLink to="/" onClick={handleHomeClick}>
+                <h2 className="nav-link">Accueil</h2>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink>
+                <h2 className="nav-link">Compétences</h2>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink>
+                <h2 className="nav-link">Projets</h2>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/Contact">
+                <h2 className="nav-link">Contact</h2>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
