@@ -6,7 +6,6 @@ import ProfilePicture2 from "../../assets/images/Profile-picture-reel.png";
 import BtnDownload from "../../components/BtnDownload/BtnDownload";
 import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-
 import CompBar from "../../components/CompBar/CompBar";
 
 function Home() {
@@ -103,7 +102,7 @@ function Home() {
           </section>
           <div className="competence-title">
             <h2>&#60;</h2>
-            <h2 className="color-first-letter">Compétences</h2>
+            <h2 id="competence-anchor" className="color-first-letter">Compétences</h2>
             <h2>&#62;</h2>
           </div>
           <section className="competence-section">

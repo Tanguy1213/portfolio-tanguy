@@ -35,6 +35,21 @@ function Header() {
     };
   }, []);
 
+
+  //GEstion de défilement vers une ancre qui n'est pas dans le meme composant
+
+  const scrollToAnchor = (anchorId) => {
+    const target = document.querySelector(anchorId);
+    if (target) {
+      const offset = target.offsetTop - 50;//-50 car c'est la taille du header qui est en pos fixe
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth',
+      });
+    }
+  };
+  
+
   return (
     <header>
       <div className="header-container">
@@ -70,7 +85,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink onClick={() => scrollToAnchor('#competence-anchor')}>
                 <h2 className="nav-link">Compétences</h2>
               </NavLink>
             </li>
