@@ -96,7 +96,7 @@ function Home() {
             <BtnDownload
               btnText={" Téléchargez mon CV"}
               fileUrl={
-                "https://drive.google.com/u/0/uc?id=1mB2xGa10rqBOQrGbTUwjKJ_JzBLwbuzf&export=download"
+                "https://drive.google.com/u/0/uc?id=1b-_fwO4xSbuskLKtyfcQi_ZSOiuwaI-w&export=download"
               }
             />
           </section>
