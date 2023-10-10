@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import ThemSong from "../../assets/audio/stay-song.mp3";
+import ThemSong from "../../assets/audio/A-friend-of-mine.mp3";
 
 function Footer() {
   return (
