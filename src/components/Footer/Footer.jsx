@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import ThemSong from "../../assets/audio/A-friend-of-mine.mp3";
+import ThemSong from "../../assets/audio/";
 
 function Footer() {
   return (
@@ -45,6 +45,7 @@ function Footer() {
       </div>
       <audio controls>
         <source src={ThemSong} type="audio/mpeg" />
+        {/* Musique utilisée avec l'autorisation de Osuri - Carlos Millet */}
         Votre navigateur ne prend pas en charge l'élément audio.
       </audio>
     </footer>
