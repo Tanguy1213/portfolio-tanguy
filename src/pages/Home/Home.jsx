@@ -101,6 +101,14 @@ function Home() {
               }
             />
           </section>
+          <section className="projet-section">
+          <div className="projet-title">
+            <h2>&#60;</h2>
+            <h2 id="projets-anchor" className="color-first-letter">Projets</h2>
+            <h2>&#62;</h2>
+          </div>
+            <SliderContainer />
+          </section>
           <div className="competence-title">
             <h2>&#60;</h2>
             <h2 id="competence-anchor" className="color-first-letter">Compétences</h2>
@@ -138,14 +146,7 @@ function Home() {
               pourcentage={70}
             />
           </section>
-          <section>
-          <div className="competence-title">
-            <h2>&#60;</h2>
-            <h2 id="projets-anchor" className="color-first-letter">Projets</h2>
-            <h2>&#62;</h2>
-          </div>
-            <SliderContainer />
-          </section>
+          
           <a
             className="navigationAnchor"
             href="#top-page"

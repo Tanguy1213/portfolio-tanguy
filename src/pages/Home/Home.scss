@@ -97,7 +97,8 @@
 }
 
 //COMPETENCES
-.competence-title {
+.competence-title,
+.projet-title {
   color: white;
   width: 100%;
   font-size: 45px;
@@ -139,3 +140,9 @@
 }
 
 //PROJET
+.projet-section{
+  padding: 10rem 2rem 20rem 2rem;
+}
+.projet-title{
+  margin-bottom: 100px;
+}

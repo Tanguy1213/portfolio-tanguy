@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "./SliderContainer.scss";
 import SliderCard from "./SliderCard/SliderCard";
-
+import ImgBooki from "../../assets/images/Booki_image.png"
 
 
 const cardList = [
-  { title: "Card 1", content: "content 1" },
-  { title: "Card 2", content: "content 2" },
-  { title: "Card 3", content: "content 3" },
-  { title: "Card 4", content: "content 4" },
-  { title: "Card 5", content: "content 5" },
-  { title: "Card 6", content: "content 6" },
-  { title: "Card 7", content: "content 7" },
+  { title: "Projet Booki", src: ImgBooki, alt: "image du projet booki"},
+  { title: "Card 2", src: ImgBooki, alt: "image du projet booki"},
+  { title: "Card 3", src: ImgBooki, alt: "image du projet booki"},
+  { title: "Card 4", src: ImgBooki, alt: "image du projet booki"},
+  { title: "Card 5", src: ImgBooki, alt: "image du projet booki"},
+  { title: "Card 6", src: ImgBooki, alt: "image du projet booki"},
+  { title: "Card 7", src: ImgBooki, alt: "image du projet booki"},
 ];
 
 const NextArrow = ({ onClick }) => {
@@ -50,7 +50,7 @@ function SliderContainer() {
     <Slider {...settings}>
       {cardList.map((card, index) => (
         <div className={index === cardIdx ? "slide activeSlide" : "slide"} key={index}>
-          <SliderCard title={card.title} content={card.content} />
+          <SliderCard title={card.title} src={card.src} desc={card.desc} />
         </div>
       ))}
     </Slider>

@@ -85,13 +85,13 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={() => scrollToAnchor('#competence-anchor')}>
-                <h2 className="nav-link">Compétences</h2>
+              <NavLink onClick={() => scrollToAnchor('#projets-anchor')}>
+                <h2 className="nav-link">Projets</h2>
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={() => scrollToAnchor('#projets-anchor')}>
-                <h2 className="nav-link">Projets</h2>
+              <NavLink onClick={() => scrollToAnchor('#competence-anchor')}>
+                <h2 className="nav-link">Compétences</h2>
               </NavLink>
             </li>
             <li>

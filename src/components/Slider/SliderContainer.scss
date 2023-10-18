@@ -1,37 +1,46 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+@import "../../variables.scss";
 
 .arrow {
-  color: white;
   position: absolute;
   cursor: pointer;
+  font-size:xx-large;
   z-index: 10;
-  .svg {
-    transition: color 300ms;
+  &:hover{
+    scale: 1.1;
   }
-  
+  &:active{
+    scale: 0.9;
+  }
+  i{
+   color: $light-green-color;
+  }
 }
 .next {
-    right: 0%;
-    top: 50%;
+    right: 47%;
+    top: 115%;
   }
   .prev {
-    left: 0%;
-    top: 50%;
+    left: 47%;
+    top: 115%;
   }
 
 .slider-container {
-  width: 80%;
+  width: 100%;
+  max-width: 1700px;
+  height: fit-content;
   margin: auto;
 }
 
 .slide {
-  transform: scale(0.2);
+  transform: scale(0.3);
   transition: transform 300ms;
   opacity: 0.5;
 }
 
 .activeSlide {
-  transform: scale(1.1);
+  transform: scale(1);
   opacity: 1;
+  cursor: pointer;
 }

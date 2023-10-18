@@ -4,8 +4,8 @@ import "./SliderCard.scss"
 function SliderCard(props) {
   return (
     <div className='card-container'>
-        <h2>{props.title}</h2>
-        <p>{props.content}</p>
+        <h3>{props.title}</h3>
+        <img src={props.src} alt={props.alt}></img>
     </div>
   )
 }
