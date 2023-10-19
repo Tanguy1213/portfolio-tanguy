@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Projet Booki",
+        "src": "../../assets/images/Booki-image.png",
+        "alt": "Image du projet booki"
+    },
+    {
+        "title": "Projet 2",
+        "src": "../../assets/images/Booki-image.png",
+        "alt": "Image du projet 2"
+    },
+    {
+        "title": "Projet 3",
+        "src": "../../assets/images/Booki-image.png",
+        "alt": "Image du projet 3"
+    },
+    {
+        "title": "Projet 4",
+        "src": "../../assets/images/Booki-image.png",
+        "alt": "Image du projet 4"
+    }
+]

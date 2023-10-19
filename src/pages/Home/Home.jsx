@@ -9,6 +9,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import CompBar from "../../components/CompBar/CompBar";
 import SliderContainer from "../../components/Slider/SliderContainer";
 
+
 function Home() {
   //Gestion de l'animation de la photo de profil ---A retirer ?---
   const [isFlipped, setIsFlipped] = useState(false);
