@@ -5,7 +5,7 @@ function SliderCard(props) {
   return (
     <div className='card-container'>
         <h3>{props.title}</h3>
-        <img src={props.src} alt={props.alt}></img>
+        <img src={props.src} alt={props.alt}/>
     </div>
   )
 }
