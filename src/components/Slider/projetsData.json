@@ -20,13 +20,23 @@
         "alt": "Image du projet de Sophie Bluel"
     },
     {
-        "title": "Projet 5",
-        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Booki-image-slider.png?raw=true",
-        "alt": "Image du projet 4"
+        "title": "Argent Bank",
+        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/argent-bank-image-slider.png?raw=true",
+        "alt": "Image du projet Argent Bank"
     },
     {
-        "title": "Projet 6",
-        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Booki-image-slider.png?raw=true",
-        "alt": "Image du projet 4"
+        "title": "Kasa",
+        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/kasa-image-slider.png?raw=true",
+        "alt": "Image du projet Kasa"
+    },
+    {
+        "title": "Debug",
+        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/debug-image-slider.png?raw=true",
+        "alt": "Image du projet debug 724 Event"
+    },
+    {
+        "title": "Nina Carducci",
+        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/nina-carducci-image-slider.png?raw=true",
+        "alt": "Image du projet Nina Carducci"
     }
 ]
