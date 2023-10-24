@@ -1,23 +1,23 @@
 [
     {
-        "title": "Projet Booki",
+        "title": "Booki",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/Booki-image-slider.png?raw=true",
         "alt": "Image du projet booki"
     },
     {
-        "title": "Projet Ohmyfood",
+        "title": "Ohmyfood",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/ohmyfood-image-slider.png?raw=true",
         "alt": "Image du projet ohmyfood"
     },
     {
-        "title": "Projet 3",
-        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Booki-image-slider.png?raw=true",
-        "alt": "Image du projet 3"
+        "title": "Print it!",
+        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/printit-image-slider.png?raw=true",
+        "alt": "Image du projet Print it!"
     },
     {
-        "title": "Projet 4",
-        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Booki-image-slider.png?raw=true",
-        "alt": "Image du projet 4"
+        "title": "Sophie Bluel",
+        "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/sophie-bluel-image-slider.png?raw=true",
+        "alt": "Image du projet de Sophie Bluel"
     },
     {
         "title": "Projet 5",
