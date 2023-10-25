@@ -5,42 +5,93 @@
 .arrow {
   position: absolute;
   cursor: pointer;
-  font-size:xx-large;
-  z-index: 10;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  z-index: 2;
+  border-width: 22px 31px 22px 0px;
+  @media screen and (max-width: 1440px) {
+    border-width: 15px 20px 15px 0px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   &:hover{
+    border-color: transparent $light-green-color transparent transparent;
     scale: 1.1;
   }
   &:active{
-    scale: 0.9;
-  }
-  i{
-   color: $light-green-color;
+    scale:0.9;
   }
 }
 .next {
-    right: 47%;
-    top: 115%;
+  right: 30%;
+  top: 48%;
+  rotate: 180deg;
+  @media screen and (max-width: 1024px) {
+    right: -10%;
   }
-  .prev {
-    left: 47%;
-    top: 115%;
+}
+.prev {
+  left: 30%;
+  top: 48%;
+  @media screen and (max-width: 1024px) {
+    left: -10%;
   }
+}
 
 .slider-container {
   width: 100%;
-  max-width: 1700px;
   height: fit-content;
   margin: auto;
+  @media screen and (max-width: 1024px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 425px) {
+   width: 90%;
+  }
 }
 
 .slide {
   transform: scale(0.3);
   transition: transform 300ms;
   opacity: 0.5;
+  img {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    filter: blur(7px);
+  }
 }
 
 .activeSlide {
   transform: scale(1);
   opacity: 1;
   cursor: pointer;
+  img{
+    filter: blur(0);
+  }
+}
+
+.bullet-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  background: #fff; /* Couleur des bullet points */
+  margin: 0 5px;
+  border-radius: 50%; /* Pour faire des bullet points ronds */
+  transition: background 0.3s;
+}
+
+.bullet.active {
+  background: $light-green-color; /* Couleur de fond des bullet points actifs */
 }

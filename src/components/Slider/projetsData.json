@@ -2,41 +2,73 @@
     {
         "title": "Booki",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/Booki-image-slider.png?raw=true",
-        "alt": "Image du projet booki"
+        "alt": "Image du projet booki",
+        "description": "Création de la page d'accueil d'une agence de voyage. L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. Je chargé d'intégrer l'interface du site avec du code HTML et CSS. Pour cela, j'ai travaillé en étroite collaboration avec Sarah, la CTO, et Loïc, l’UI designer.",
+        "compétences": ["HTML","CSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Ohmyfood",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/ohmyfood-image-slider.png?raw=true",
-        "alt": "Image du projet ohmyfood"
+        "alt": "Image du projet ohmyfood",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Print it!",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/printit-image-slider.png?raw=true",
-        "alt": "Image du projet Print it!"
+        "alt": "Image du projet Print it!",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Sophie Bluel",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/sophie-bluel-image-slider.png?raw=true",
-        "alt": "Image du projet de Sophie Bluel"
+        "alt": "Image du projet de Sophie Bluel",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Argent Bank",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/argent-bank-image-slider.png?raw=true",
-        "alt": "Image du projet Argent Bank"
+        "alt": "Image du projet Argent Bank",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Kasa",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/kasa-image-slider.png?raw=true",
-        "alt": "Image du projet Kasa"
+        "alt": "Image du projet Kasa",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Debug",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/debug-image-slider.png?raw=true",
-        "alt": "Image du projet debug 724 Event"
+        "alt": "Image du projet debug 724 Event",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     },
     {
         "title": "Nina Carducci",
         "src": "https://github.com/Tanguy1213/portfolio-tanguy/blob/master/src/assets/images/Slider/nina-carducci-image-slider.png?raw=true",
-        "alt": "Image du projet Nina Carducci"
+        "alt": "Image du projet Nina Carducci",
+        "description": "Description ici",
+        "compétences": ["React","Javascript","SCSS"],
+        "githubLink":"https://github.com",
+        "siteLink": "https://sitelink.com"
     }
 ]
