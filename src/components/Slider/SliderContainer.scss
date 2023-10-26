@@ -26,16 +26,16 @@
   }
 }
 .next {
-  right: 30%;
-  top: 48%;
+  right: 5%;
+  top: 45%;
   rotate: 180deg;
   @media screen and (max-width: 1024px) {
     right: -10%;
   }
 }
 .prev {
-  left: 30%;
-  top: 48%;
+  left: 5%;
+  top: 45%;
   @media screen and (max-width: 1024px) {
     left: -10%;
   }
@@ -60,6 +60,7 @@
   transform: scale(0.3);
   transition: transform 300ms;
   opacity: 0.5;
+  outline: none;
   img {
     width: 100%;
     border-radius: 15px;
@@ -89,9 +90,11 @@
   background: #fff; /* Couleur des bullet points */
   margin: 0 5px;
   border-radius: 50%; /* Pour faire des bullet points ronds */
-  transition: background 0.3s;
+  transition: background 0.3s ease-in-out;
 }
 
 .bullet.active {
   background: $light-green-color; /* Couleur de fond des bullet points actifs */
+  scale: 1.4;
+  transition: scale 0.3s ease-in-out;
 }
