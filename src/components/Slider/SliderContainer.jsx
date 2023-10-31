@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "./SliderContainer.scss";
-import cardList from "./projetsData.json";
+import { cardList } from "./projetsData.js";
 import CustomModal from "./CustomModal";
 
 const NextArrow = ({ onClick }) => {

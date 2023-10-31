@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Header.scss";
-import signature1 from "../../assets/images/Signature-tanguy-large.png";
-import signature2 from "../../assets/images/Signature-tanguy-small.png";
+import signature1 from "../../assets/images/Signature-tanguy-large.webp";
+import signature2 from "../../assets/images/Signature-tanguy-small.webp";
 
 function Header() {
   const navigate = useNavigate();
