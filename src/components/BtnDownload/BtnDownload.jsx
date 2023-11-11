@@ -9,7 +9,7 @@ function BtnDownload({ btnText, fileUrl }) {
   }
 
   return (
-    <a className=" gradient-border" href={fileUrl} target="_blank">
+    <a className=" gradient-border" href={fileUrl} target="_blank" rel="noreferrer">
       <span>
         <i className="fas fa-file-arrow-down"></i>
         {btnText}
