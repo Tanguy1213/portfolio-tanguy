@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import "./CustomModal.scss";
+import PropTypes from "prop-types";
 
 // Définissez le style de la modale
 const modalStyle = {
@@ -30,8 +31,10 @@ function CustomModal({ isOpen, closeModal, cardData }) {
   useEffect(() => {
     if (isOpen) {
       setModalClass("modal modal-open");
+      document.body.style.overflow = "hidden";
     } else {
       setModalClass("modal");
+      document.body.style.overflow = "auto";
     }
   }, [isOpen]);
 
@@ -53,49 +56,54 @@ function CustomModal({ isOpen, closeModal, cardData }) {
               <div className="tech-wrapper">
                 <h4>Technologies :</h4>
                 <div>
-                {cardData.technologies.map((technologie, index) => (
-                  <span key={index}>
-                    {technologiesIcons[technologie] ? (
-                      <>
+                  {cardData.technologies.map((technologie, index) => (
+                    <span key={index}>
+                      {technologiesIcons[technologie] ? (
                         <i className={technologiesIcons[technologie]} />
-                      </>
-                    ) : (
-                      technologie
-                    )}
-                    {index < cardData.technologies.length - 1 && (
-                      <span className="split-style"> | </span>
-                    )}
-                  </span>
-                ))}
+                      ) : (
+                        technologie
+                      )}
+                      {index < cardData.technologies.length - 1 && (
+                        <span className="split-style"> | </span>
+                      )}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
           <div className="link-wrapper">
-            <a
-              href={cardData.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`buttonStyle ${
-                !cardData.githubLink ? "disabled" : ""
-              }`}
-              disabled={!cardData.githubLink}
-            >
-              {cardData.githubLink
-                ? "Voir sur GitHub"
-                : "Pas de lien GitHub disponible"}
-            </a>
-            <a
-              href={cardData.siteLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`buttonStyle ${!cardData.siteLink ? "disabled" : ""}`}
-              disabled={!cardData.siteLink}
-            >
-              {cardData.siteLink
-                ? "Voir le site"
-                : "Pas de lien vers le site disponible"}
-            </a>
+          <a
+  href={cardData.githubLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`buttonStyle ${!cardData.githubLink ? "disabled" : ""}`}
+  disabled={!cardData.githubLink}
+>
+  {window.innerWidth <= 425 ? (
+    <span>
+      <i className="fab fa-github" />
+    </span>
+  ) : (
+    <span>Voir sur GitHub</span>
+  )}
+</a>
+
+<a
+  href={cardData.siteLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`buttonStyle ${!cardData.siteLink ? "disabled" : ""}`}
+  disabled={!cardData.siteLink}
+>
+  {window.innerWidth <= 425 ? (
+    <span>
+      <i className="fas fa-globe" />
+    </span>
+  ) : (
+    <span>Voir le site</span>
+  )}
+</a>
           </div>
           <button onClick={closeModal}>X</button>
         </div>
@@ -103,5 +111,11 @@ function CustomModal({ isOpen, closeModal, cardData }) {
     </Modal>
   );
 }
+
+CustomModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  closeModal: PropTypes.any.isRequired,
+  cardData: PropTypes.object.isRequired,
+};
 
 export default CustomModal;

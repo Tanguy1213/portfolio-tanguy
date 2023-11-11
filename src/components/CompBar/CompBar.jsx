@@ -60,16 +60,16 @@ const CompBar = ({ titre, pourcentage, icone }) => {
     };
   }, []);
 
-  //délais pour l'affichage des barres de compétences pour éviter un micro affichage et le déclenchement du remplissage non voulu
+  //délais pour l'affichage des barres de compétences pour éviter un micro affichage
   useEffect(() => {
     const competencesContainer = document.querySelector(".competence-section");
 
-    // Utilisez setTimeout pour ajouter la classe "visible" après 2,5 secondes (2500 millisecondes)
+    // setTimeout pour ajouter la classe "visible" après 2000 millisecondes
     setTimeout(() => {
       if (competencesContainer) {
         competencesContainer.classList.add("visible");
       }
-    }, 200); // 1 secondes de délais
+    }, 200);
   }, []);
 
   return (
@@ -97,6 +97,7 @@ const CompBar = ({ titre, pourcentage, icone }) => {
 CompBar.propTypes = {
   titre: PropTypes.string.isRequired,
   pourcentage: PropTypes.number.isRequired,
+  icone: PropTypes.any.isRequired
 };
 
 export default CompBar;

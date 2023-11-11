@@ -3,10 +3,7 @@ import "./BtnDownload.scss";
 import PropTypes from 'prop-types';
 
 function BtnDownload({ btnText, fileUrl }) {
-  BtnDownload.propTypes = {
-    btnText: PropTypes.string.isRequired,
-    fileUrl: PropTypes.string.isRequired
-  }
+  
 
   return (
     <a className=" gradient-border" href={fileUrl} target="_blank" rel="noreferrer">
@@ -16,6 +13,11 @@ function BtnDownload({ btnText, fileUrl }) {
       </span>
     </a>
   );
+}
+
+BtnDownload.propTypes = {
+  btnText: PropTypes.string.isRequired,
+  fileUrl: PropTypes.string.isRequired
 }
 
 

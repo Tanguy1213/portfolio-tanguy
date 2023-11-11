@@ -3,15 +3,17 @@ import Slider from "react-slick";
 import "./SliderContainer.scss";
 import { cardList } from "./projetsData.js";
 import CustomModal from "./CustomModal";
+import PropTypes from "prop-types";
 
 const NextArrow = ({ onClick }) => {
   return (
-    <div className="arrow next" onClick={onClick}></div>
+    <div className="arrow next" onClick={onClick} onKeyDown={null}></div>
   );
 };
+
 const PrevArrow = ({ onClick }) => {
   return (
-    <div className="arrow prev" onClick={onClick}></div>
+    <div className="arrow prev" onClick={onClick} onKeyDown={null}></div>
   );
 };
 
@@ -43,15 +45,15 @@ function SliderContainer() {
     ></div>
   ));
 
-  const openModal = (card) => {
+  const openModal = () => {
     setIsOpen(true);
   };
-  
+
   const closeModal = () => {
     setIsOpen(false);
   };
- 
 
+  
   return (
     <div className="slider-container">
       <Slider {...settings}>
@@ -61,11 +63,12 @@ function SliderContainer() {
             key={index}
             onClick={() => {
               if (index === cardIdx) {
-                openModal(card); // Ouvre la modale uniquement si la slide est active
+                openModal(); // Ouvre la modale uniquement si la slide est active
               }
             }}
-          >    
-              <img src={card.src} alt={card.alt} />
+            onKeyDown={null}
+          >
+            <img src={card.src} alt={card.alt} />
           </div>
         ))}
       </Slider>
@@ -74,5 +77,13 @@ function SliderContainer() {
     </div>
   );
 }
+
+NextArrow.propTypes = {
+  onClick: PropTypes.any,
+};
+
+PrevArrow.propTypes = {
+  onClick: PropTypes.any,
+};
 
 export default SliderContainer;
