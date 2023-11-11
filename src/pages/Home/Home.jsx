@@ -8,6 +8,7 @@ import Particles from "../../components/Particles";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import CompBar from "../../components/CompBar/CompBar";
 import SliderContainer from "../../components/Slider/SliderContainer";
+import CV from "../../assets/documents/CV_STRUB_TANGUY.pdf"
 
 
 function Home() {
@@ -37,12 +38,12 @@ function Home() {
   }`;
 
   //Gestion de l'animation de l'icone de retour en haut de page
-  const [iconeIsHovered, seticoneIsHovered] = useState(false);
+  const [iconeIsHovered, setIconeIsHovered] = useState(false);
   const handleMouseEnter = () => {
-    seticoneIsHovered(true);
+    setIconeIsHovered(true);
   };
   const handleMouseLeave = () => {
-    seticoneIsHovered(false);
+    setIconeIsHovered(false);
   };
   const faGoingUpIcone = iconeIsHovered // En fonction du state de Hover on applique (ou non) la classe FontAwesome de bounce
     ? "fa-solid fa-angles-up fa-xl fa-bounce"
@@ -93,13 +94,12 @@ function Home() {
                 src={ProfilePicture}
                 alt="tanguy strub developpeur front-end web"
                 onClick={handleProfilePictureClick}
+                onKeyDown={null}
               ></img>
             </div>
             <BtnDownload
               btnText={" Téléchargez mon CV"}
-              fileUrl={
-                "https://drive.google.com/u/0/uc?id=1b-_fwO4xSbuskLKtyfcQi_ZSOiuwaI-w&export=download"
-              }
+              fileUrl={CV}
             />
           </section>
           <section className="projet-section">
