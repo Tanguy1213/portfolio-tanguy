@@ -73,37 +73,39 @@ function CustomModal({ isOpen, closeModal, cardData }) {
             </div>
           </div>
           <div className="link-wrapper">
-          <a
-  href={cardData.githubLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`buttonStyle ${!cardData.githubLink ? "disabled" : ""}`}
-  disabled={!cardData.githubLink}
->
-  {window.innerWidth <= 425 ? (
-    <span>
-      <i className="fab fa-github" />
-    </span>
-  ) : (
-    <span>Voir sur GitHub</span>
-  )}
-</a>
+            <a
+              href={cardData.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`buttonStyle ${
+                !cardData.githubLink ? "disabled" : ""
+              }`}
+              disabled={!cardData.githubLink}
+            >
+              {window.innerWidth <= 425 ? (
+                <span>
+                  <i className="fab fa-github" />
+                </span>
+              ) : (
+                <span>Voir sur GitHub</span>
+              )}
+            </a>
 
-<a
-  href={cardData.siteLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`buttonStyle ${!cardData.siteLink ? "disabled" : ""}`}
-  disabled={!cardData.siteLink}
->
-  {window.innerWidth <= 425 ? (
-    <span>
-      <i className="fas fa-globe" />
-    </span>
-  ) : (
-    <span>Voir le site</span>
-  )}
-</a>
+            <a
+              href={cardData.siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`buttonStyle ${!cardData.siteLink ? "disabled" : ""}`}
+              disabled={!cardData.siteLink}
+            >
+              {window.innerWidth <= 425 ? (
+                <span>
+                  <i className="fas fa-globe" />
+                </span>
+              ) : (
+                <span>Voir le site</span>
+              )}
+            </a>
           </div>
           <button onClick={closeModal}>X</button>
         </div>
