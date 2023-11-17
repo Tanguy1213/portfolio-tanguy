@@ -48,6 +48,9 @@ function Footer() {
         {/* Musique utilisée avec l'autorisation de Osuri - Carlos Millet */}
         Votre navigateur ne prend pas en charge l'élément audio.
       </audio>
+      <div >
+        <p className="credits">© 2023 Strub Tanguy. All rights reserved</p>
+      </div>
     </footer>
   );
 }
