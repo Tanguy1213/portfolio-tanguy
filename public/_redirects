@@ -2,4 +2,4 @@
 /* /index.html 200
 
 # Exception pour permettre l'accès direct au fichier sitemap.xml
-/sitemap.xml 200
+/sitemap.xml /sitemap.xml 200
