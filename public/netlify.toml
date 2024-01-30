@@ -7,3 +7,4 @@
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
+  headers = { Type = "application/xml" }
