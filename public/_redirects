@@ -1,5 +1,0 @@
-# Règle de redirection pour la gestion du routage côté client
-/* /index.html 200
-
-# Exception pour permettre l'accès direct au fichier sitemap.xml
-/sitemap.xml /sitemap.xml 200
