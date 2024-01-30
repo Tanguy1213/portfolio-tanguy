@@ -11,6 +11,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Contact" element={<Contact />}/>
+        <Route path="/sitemap.txt" element={<Sitemap />} />
       </Routes>
     </BrowserRouter>
   );
