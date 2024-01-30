@@ -1,10 +1,9 @@
 [[redirects]]
-  from = "/*"
-  to = "/"
+  from = "/sitemap"
+  to = "/sitemap"
   status = 200
 
 [[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
+  from = "/*"
+  to = "/"
   status = 200
-  headers = { Type = "application/xml" }
