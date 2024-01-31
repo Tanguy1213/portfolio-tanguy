@@ -43,7 +43,7 @@ const CompBar = ({ titre, pourcentage, icone }) => {
     const options = {
       root: null, // Fenêtre comme racine de l'observation
       rootMargin: "0px", // Marge autour de la fenêtre
-      threshold: 1, // Portion visible requise pour déclencher l'observation
+      threshold: 0.9, // Portion visible requise pour déclencher l'observation
     };
     const callback = (entries) => {
       if (entries[0].isIntersecting) {
