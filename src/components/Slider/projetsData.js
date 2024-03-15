@@ -6,8 +6,18 @@ import KasaImg from "../../assets/images/Slider/kasa-image-slider.webp"
 import NinacImg from "../../assets/images/Slider/nina-carducci-image-slider.webp"
 import DebugImg from "../../assets/images/Slider/debug-image-slider.webp"
 import ArgentbImg from "../../assets/images/Slider/argent-bank-image-slider.webp"
+import KanxImg from "../../assets/images/Slider/kanx-image-slider.webp"
 
 export const cardList = [
+    {
+        "title": "Kanx",
+        "src": KanxImg,
+        "alt": "Image du projet Kanx Sarl",
+        "description": "Mise à jour du site Kanx avec Wordpress. Passage d'une one-page à plusieurs pages avec navigation. Mise en avant des projets d'installations photovoltaïques de l'entreprise Kanx spécialisée dans la mise en place de panneaux solaires en Suisse.",
+        "technologies": ["HTML","CSS"],
+        "githubLink":null,
+        "siteLink": "https://kanx.ch/"
+    },
     {
         "title": "Booki",
         "src": BookiImg,
