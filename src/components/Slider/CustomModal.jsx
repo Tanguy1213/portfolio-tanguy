@@ -24,6 +24,7 @@ const technologiesIcons = {
   SASS: "fa-brands fa-sass",
   CSS: "fa-brands fa-css3-alt",
   Javascript: "fa-brands fa-square-js",
+  Wordpress : "fa-brands fa-wordpress",
 };
 function CustomModal({ isOpen, closeModal, cardData }) {
   const [modalClass, setModalClass] = useState("modal");

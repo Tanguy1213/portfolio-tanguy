@@ -14,8 +14,8 @@ export const cardList = [
         "src": KanxImg,
         "alt": "Image du projet Kanx Sarl",
         "description": "Mise à jour du site Kanx avec Wordpress. Passage d'une one-page à plusieurs pages avec navigation. Mise en avant des projets d'installations photovoltaïques de l'entreprise Kanx spécialisée dans la mise en place de panneaux solaires en Suisse.",
-        "technologies": ["HTML","CSS"],
-        "githubLink":null,
+        "technologies": ["Wordpress"],
+        "githubLink": null,
         "siteLink": "https://kanx.ch/"
     },
     {
