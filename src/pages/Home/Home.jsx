@@ -146,6 +146,11 @@ function Home() {
               icone={<i className="fa-brands fa-sass"></i>}
               pourcentage={70}
             />
+            <CompBar
+              titre="Wordpress"
+              icone={<i className="fa-brands fa-wordpress"></i>}
+              pourcentage={65}
+            />
           </section>
           
           <a
